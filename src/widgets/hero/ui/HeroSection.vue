@@ -7,11 +7,6 @@ const emit = defineEmits<{
   (e: 'open-demo'): void
 }>()
 
-const scrollToProblems = () => {
-  const el = document.querySelector('#problems')
-  if (el) el.scrollIntoView({ behavior: 'smooth' })
-}
-
 const scrollToHowItWorks = () => {
   const el = document.querySelector('#how-it-works')
   if (el) el.scrollIntoView({ behavior: 'smooth' })
@@ -83,17 +78,6 @@ const scrollToHowItWorks = () => {
         <div class="lg:col-span-6 relative">
           <DashboardMockup />
         </div>
-      </div>
-
-      <!-- Anchor down button -->
-      <div class="flex flex-col items-center justify-center mt-12 md:mt-16">
-        <button
-          @click="scrollToProblems"
-          class="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest text-slate-400 hover:text-sky-600 transition-colors uppercase group focus:outline-none"
-        >
-          <span>Pastga</span>
-          <ChevronDown class="w-3.5 h-3.5 transition-transform group-hover:translate-y-1" />
-        </button>
       </div>
     </div>
   </section>
