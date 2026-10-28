@@ -2,6 +2,8 @@
 import { ArrowRight, ChevronDown, ShieldCheck } from 'lucide-vue-next'
 import { Button } from '@/shared/ui/button'
 import DashboardMockup from './DashboardMockup.vue'
+import WaterDropletStream from '@/shared/ui/animation/WaterDropletStream.vue'
+import FlowingWaterWave from '@/shared/ui/animation/FlowingWaterWave.vue'
 
 const emit = defineEmits<{
   (e: 'open-demo'): void
@@ -14,7 +16,7 @@ const scrollToHowItWorks = () => {
 </script>
 
 <template>
-  <section id="top" class="relative pt-28 pb-14 md:pt-36 md:pb-20 overflow-hidden bg-grid-pattern">
+  <section id="top" class="relative pt-28 pb-12 md:pt-36 md:pb-16 overflow-hidden bg-grid-pattern">
     <!-- Subtle Ambient Glows -->
     <div
       class="absolute top-1/4 -left-48 w-96 h-96 rounded-full bg-sky-200/40 blur-3xl pointer-events-none"
@@ -23,10 +25,15 @@ const scrollToHowItWorks = () => {
       class="absolute top-1/3 -right-48 w-96 h-96 rounded-full bg-cyan-200/35 blur-3xl pointer-events-none"
     ></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-8 md:mb-12">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
         <!-- Left Column: Copy & Actions -->
         <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+          <!-- Animated Live Water Stream Indicator -->
+          <div class="flex items-center justify-center lg:justify-start">
+            <WaterDropletStream />
+          </div>
+
           <!-- Main Title -->
           <h1
             class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]"
@@ -79,6 +86,11 @@ const scrollToHowItWorks = () => {
           <DashboardMockup />
         </div>
       </div>
+    </div>
+
+    <!-- Continuous Flowing Moving Water Wave at Bottom of Hero -->
+    <div class="relative w-full -mb-1">
+      <FlowingWaterWave />
     </div>
   </section>
 </template>

@@ -75,9 +75,9 @@ const getFeatureIcon = (name: string) => {
             x2="400"
             y2="225"
             stroke="url(#lineGrad)"
-            stroke-width="2"
-            stroke-dasharray="6 6"
-            class="animate-pulse"
+            stroke-width="3"
+            stroke-dasharray="8 6"
+            class="animate-water-stream"
           />
 
           <!-- Bottom-Left (Ferma) to Center -->
@@ -87,9 +87,9 @@ const getFeatureIcon = (name: string) => {
             x2="400"
             y2="225"
             stroke="url(#lineGrad)"
-            stroke-width="2"
-            stroke-dasharray="6 6"
-            class="animate-pulse"
+            stroke-width="3"
+            stroke-dasharray="8 6"
+            class="animate-water-stream"
           />
 
           <!-- Center to Top-Right (Dastavkachi) -->
@@ -99,9 +99,9 @@ const getFeatureIcon = (name: string) => {
             x2="560"
             y2="130"
             stroke="url(#lineGrad)"
-            stroke-width="2"
-            stroke-dasharray="6 6"
-            class="animate-pulse"
+            stroke-width="3"
+            stroke-dasharray="8 6"
+            class="animate-water-stream"
           />
 
           <!-- Center to Bottom-Right (Dashboard) -->
@@ -111,9 +111,9 @@ const getFeatureIcon = (name: string) => {
             x2="560"
             y2="320"
             stroke="url(#lineGrad)"
-            stroke-width="2"
-            stroke-dasharray="6 6"
-            class="animate-pulse"
+            stroke-width="3"
+            stroke-dasharray="8 6"
+            class="animate-water-stream"
           />
         </svg>
 

@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { Check, ArrowRight, ShieldCheck, Send, CheckCircle2 } from 'lucide-vue-next'
 import { Button } from '@/shared/ui/button'
 import { sendDemoEmail } from '@/shared/lib/email'
+import FlowingWaterWave from '@/shared/ui/animation/FlowingWaterWave.vue'
 
 const emit = defineEmits<{
   (e: 'open-demo'): void
@@ -34,7 +35,13 @@ const handleFormSubmit = async () => {
 </script>
 
 <template>
-  <section id="demo" class="py-20 md:py-28 bg-gradient-to-r from-sky-600 via-sky-500 to-blue-600 text-white relative overflow-hidden">
+  <div class="relative w-full">
+    <!-- Top Fluid Water Wave -->
+    <div class="w-full -mb-1 relative z-20">
+      <FlowingWaterWave />
+    </div>
+
+    <section id="demo" class="py-20 md:py-28 bg-gradient-to-r from-sky-600 via-sky-500 to-blue-600 text-white relative overflow-hidden">
     <!-- Subtle Grid Pattern & Ambient Lighting -->
     <div class="absolute inset-0 bg-grid-pattern opacity-15 pointer-events-none"></div>
 
@@ -150,4 +157,5 @@ const handleFormSubmit = async () => {
       </div>
     </div>
   </section>
+  </div>
 </template>
