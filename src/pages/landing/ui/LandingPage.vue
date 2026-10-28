@@ -3,7 +3,6 @@ import { ref } from 'vue'
 import Navbar from '@/widgets/navbar/ui/Navbar.vue'
 import HeroSection from '@/widgets/hero/ui/HeroSection.vue'
 import ProblemsSection from '@/widgets/problems/ui/ProblemsSection.vue'
-import SolutionCompareSection from '@/widgets/solution-compare/ui/SolutionCompareSection.vue'
 import AutomationEngineSection from '@/widgets/automation-engine/ui/AutomationEngineSection.vue'
 import HowItWorksFlowSection from '@/widgets/how-it-works-flow/ui/HowItWorksFlowSection.vue'
 import LiveMapSection from '@/widgets/live-map/ui/LiveMapSection.vue'
@@ -32,9 +31,6 @@ const openDemoModal = () => {
 
       <!-- Problems Grid (Haqiqiy muammolar 01-06) -->
       <ProblemsSection />
-
-      <!-- Solution Comparison (Manual vs GidroGo) -->
-      <SolutionCompareSection />
 
       <!-- Automation Hub Engine & Feature Pills -->
       <AutomationEngineSection />

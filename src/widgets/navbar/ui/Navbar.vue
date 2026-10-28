@@ -13,7 +13,6 @@ const isMobileMenuOpen = ref(false)
 const navLinks = [
   { name: 'Bosh sahifa', href: '#top' },
   { name: 'Muammolar', href: '#problems' },
-  { name: 'Yechim', href: '#solution' },
   { name: 'Imkoniyatlar', href: '#features' },
   { name: 'Qanday ishlaydi', href: '#how-it-works' },
   { name: 'FAQ', href: '#faq' },
