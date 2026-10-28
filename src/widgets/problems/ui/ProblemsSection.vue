@@ -51,11 +51,14 @@ const getIcon = (name: string) => {
         <Card
           v-for="item in problemsList"
           :key="item.id"
-          class="relative group bg-white border border-slate-100 rounded-3xl p-7 hover:border-sky-200 hover:-translate-y-1 transition-all duration-300 overflow-hidden shadow-card-soft hover:shadow-card-hover"
+          class="relative group bg-white border border-slate-200/80 rounded-[2rem] p-8 hover:border-sky-400 hover:-translate-y-2 transition-all duration-300 overflow-hidden shadow-card-soft hover:shadow-card-hover"
         >
-          <!-- Icon box -->
+          <!-- Subtle Top Gradient Glow on Hover -->
+          <div class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-sky-400/10 blur-2xl group-hover:bg-sky-400/25 transition-all duration-300 pointer-events-none"></div>
+
+          <!-- Icon box with water ripple reflection -->
           <div
-            class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors duration-300 shadow-sm"
+            class="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-100/90 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-gradient-to-tr group-hover:from-sky-600 group-hover:to-cyan-500 group-hover:text-white group-hover:scale-110 transition-all duration-300 shadow-sm"
           >
             <component :is="getIcon(item.icon)" class="w-6 h-6 stroke-[2]" />
           </div>

@@ -12,6 +12,7 @@ import CtaSection from '@/widgets/stats-cta/ui/CtaSection.vue'
 import FaqSection from '@/widgets/faq/ui/FaqSection.vue'
 import Footer from '@/widgets/footer/ui/Footer.vue'
 import DemoRequestModal from '@/features/demo-request/ui/DemoRequestModal.vue'
+import FloatingWaterDrops from '@/shared/ui/animation/FloatingWaterDrops.vue'
 
 const demoModalRef = ref<InstanceType<typeof DemoRequestModal> | null>(null)
 
@@ -21,7 +22,10 @@ const openDemoModal = () => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-white text-slate-900 font-sans selection:bg-sky-100 selection:text-sky-900">
+  <div class="min-h-screen bg-white text-slate-900 font-sans selection:bg-sky-100 selection:text-sky-900 relative">
+    <!-- 3D Glossy Floating Water Droplets from Left and Right -->
+    <FloatingWaterDrops />
+
     <!-- Navigation Bar -->
     <Navbar @open-demo="openDemoModal" />
 
