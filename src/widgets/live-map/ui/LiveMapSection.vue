@@ -87,7 +87,7 @@ import {
             <div
               class="absolute left-8 sm:left-14 top-1/2 -translate-y-4 z-20 flex flex-col items-center gap-1.5"
             >
-              <div class="w-12 h-12 rounded-2xl bg-sky-600 text-white flex items-center justify-center shadow-lg shadow-sky-600/30">
+              <div class="w-12 h-12 rounded-full bg-sky-600 text-white flex items-center justify-center shadow-lg shadow-sky-600/30">
                 <Warehouse class="w-6 h-6" />
               </div>
               <span class="text-xs font-bold text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 rounded-full border border-slate-100 shadow-2xs">
@@ -109,7 +109,7 @@ import {
             <div
               class="absolute right-12 sm:right-20 top-[40%] z-20 flex flex-col items-center gap-1.5"
             >
-              <div class="w-11 h-11 rounded-2xl bg-slate-900 text-white flex items-center justify-center shadow-lg shadow-slate-900/25">
+              <div class="w-11 h-11 rounded-full bg-slate-900 text-white flex items-center justify-center shadow-lg shadow-slate-900/25">
                 <MapPin class="w-5 h-5 text-sky-400" />
               </div>
               <span class="text-xs font-bold text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 rounded-full border border-slate-100 shadow-2xs">
@@ -121,7 +121,7 @@ import {
             <div
               class="absolute bottom-6 left-6 sm:bottom-8 sm:left-10 bg-white/95 backdrop-blur-md border border-slate-100 shadow-md shadow-slate-900/5 rounded-2xl px-3.5 py-2 flex items-center gap-2.5 z-20"
             >
-              <div class="w-6 h-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <div class="w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">
                 <Check class="w-4 h-4 stroke-[3]" />
               </div>
               <div>
@@ -134,7 +134,7 @@ import {
             <div
               class="absolute bottom-6 right-6 sm:bottom-8 sm:right-10 bg-white/95 backdrop-blur-md border border-slate-100 shadow-md shadow-slate-900/5 rounded-2xl px-3.5 py-2 flex items-center gap-2.5 z-20"
             >
-              <div class="w-6 h-6 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center">
+              <div class="w-6 h-6 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center">
                 <Navigation class="w-4 h-4 stroke-[2]" />
               </div>
               <div>

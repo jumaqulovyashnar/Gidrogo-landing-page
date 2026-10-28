@@ -60,7 +60,7 @@ const scrollTo = (href: string) => {
           href="tel:+998941782402"
           class="hidden lg:flex items-center gap-2 text-xs font-bold text-slate-600 hover:text-sky-600 transition-colors"
         >
-          <div class="w-7 h-7 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center">
+          <div class="w-7 h-7 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center">
             <Phone class="w-3.5 h-3.5" />
           </div>
           <span>+998 (94) 178-24-02</span>

@@ -130,7 +130,7 @@ const getFeatureIcon = (name: string) => {
                 activeNode === 'buyurtma' ? 'border-sky-500 ring-2 ring-sky-100 scale-102' : 'border-slate-200 hover:border-sky-300'
               ]"
             >
-              <div class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
+              <div class="w-11 h-11 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
                 <PhoneCall class="w-5 h-5" />
               </div>
               <div>
@@ -147,7 +147,7 @@ const getFeatureIcon = (name: string) => {
                 activeNode === 'ferma' ? 'border-sky-500 ring-2 ring-sky-100 scale-102' : 'border-slate-200 hover:border-sky-300'
               ]"
             >
-              <div class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
+              <div class="w-11 h-11 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
                 <Warehouse class="w-5 h-5" />
               </div>
               <div>
@@ -186,7 +186,7 @@ const getFeatureIcon = (name: string) => {
                 activeNode === 'dastavkachi' ? 'border-sky-500 ring-2 ring-sky-100 scale-102' : 'border-slate-200 hover:border-sky-300'
               ]"
             >
-              <div class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
+              <div class="w-11 h-11 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
                 <Truck class="w-5 h-5" />
               </div>
               <div>
@@ -203,7 +203,7 @@ const getFeatureIcon = (name: string) => {
                 activeNode === 'dashboard' ? 'border-sky-500 ring-2 ring-sky-100 scale-102' : 'border-slate-200 hover:border-sky-300'
               ]"
             >
-              <div class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
+              <div class="w-11 h-11 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
                 <BarChart3 class="w-5 h-5" />
               </div>
               <div>
@@ -239,7 +239,7 @@ const getFeatureIcon = (name: string) => {
           <div>
             <div class="flex items-center justify-between mb-6">
               <div
-                class="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center group-hover:bg-sky-600 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm"
+                class="w-14 h-14 rounded-full bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center group-hover:bg-sky-600 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm"
               >
                 <component :is="getFeatureIcon(item.icon)" class="w-7 h-7 stroke-[2]" />
               </div>

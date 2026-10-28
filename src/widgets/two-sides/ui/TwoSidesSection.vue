@@ -178,9 +178,9 @@ const emit = defineEmits<{
 
                 <!-- Product Card inside Phone with animated water droplet -->
                 <div class="bg-gradient-to-r from-sky-50 to-cyan-50/60 border border-sky-100 rounded-2xl p-3 flex items-center gap-3 relative overflow-hidden">
-                  <div class="relative w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-400 text-white flex items-center justify-center flex-shrink-0 shadow-md shadow-sky-500/30">
+                  <div class="relative w-10 h-10 rounded-full bg-gradient-to-tr from-sky-600 to-cyan-400 text-white flex items-center justify-center flex-shrink-0 shadow-md shadow-sky-500/30">
                     <Droplet class="w-5 h-5 fill-white animate-bounce" style="animation-duration: 2.5s;" />
-                    <span class="absolute inset-0 rounded-xl bg-white/20 animate-ping opacity-40"></span>
+                    <span class="absolute inset-0 rounded-full bg-white/20 animate-ping opacity-40"></span>
                   </div>
                   <div>
                     <h6 class="text-xs font-bold text-slate-800">Toza ichimlik suvi</h6>

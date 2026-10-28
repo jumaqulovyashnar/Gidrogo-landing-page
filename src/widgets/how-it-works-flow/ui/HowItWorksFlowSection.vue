@@ -92,7 +92,7 @@ const steps = [
             <!-- Top Bar: Icon & Step Number -->
             <div class="flex items-center justify-between mb-6">
               <div
-                class="w-14 h-14 rounded-2xl bg-sky-950/80 border border-sky-800/60 text-sky-400 flex items-center justify-center group-hover:bg-sky-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-md shadow-black/30"
+                class="w-14 h-14 rounded-full bg-sky-950/80 border border-sky-800/60 text-sky-400 flex items-center justify-center group-hover:bg-sky-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-md shadow-black/30"
               >
                 <component :is="step.icon" class="w-7 h-7 stroke-[2]" />
               </div>
