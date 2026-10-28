@@ -44,8 +44,8 @@ const openDemoModal = () => {
       <!-- Jonli yetkazib berish (Real-time map routing) -->
       <LiveMapSection />
 
-      <!-- Ikki tomon, bitta tajriba (Business vs Customer App) -->
-      <TwoSidesSection @open-demo="openDemoModal" />
+      <!-- Biznes va Mijoz ilovasi tajribasi -->
+      <TwoSidesSection />
 
       <!-- Aniq qarorlar (Full Mac Browser Mockup with Interactive Chart Tooltip) -->
       <FullDashboardSection />
