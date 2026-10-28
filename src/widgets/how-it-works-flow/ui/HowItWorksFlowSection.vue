@@ -104,24 +104,12 @@ const steps = [
             </div>
 
             <!-- Title & Description -->
-            <h4 class="text-xl font-extrabold text-white mb-3 group-hover:text-sky-300 transition-colors">
+            <h4 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-sky-300 transition-colors">
               {{ step.title }}
             </h4>
-            <p class="text-sm text-slate-400 leading-relaxed mb-6 group-hover:text-slate-300 transition-colors">
+            <p class="text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
               {{ step.description }}
             </p>
-          </div>
-
-          <!-- Bottom Footer Tag -->
-          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
-            <span class="inline-flex items-center gap-1.5 font-bold text-sky-400 bg-sky-950/60 border border-sky-800/50 px-3 py-1 rounded-full">
-              <Sparkles class="w-3.5 h-3.5 text-sky-400" />
-              <span>{{ step.tag }}</span>
-            </span>
-
-            <span class="text-slate-500 group-hover:text-sky-400 font-bold transition-colors">
-              Bosqich {{ step.number }} →
-            </span>
           </div>
         </Card>
       </div>

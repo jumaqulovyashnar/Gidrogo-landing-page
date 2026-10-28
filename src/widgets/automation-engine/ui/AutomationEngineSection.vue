@@ -228,44 +228,28 @@ const getFeatureIcon = (name: string) => {
         </p>
       </div>
 
-      <!-- Premium Large Shadcn Cards Grid (Row & Gorizontal Yo'nalishda) -->
+      <!-- Premium Large Shadcn Cards Grid (Clean, No Badges) -->
       <div id="features" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <Card
           v-for="item in featuresList"
           :key="item.id"
-          class="relative flex flex-col justify-between bg-white border border-slate-200/90 rounded-[2rem] p-7 sm:p-8 hover:border-sky-400 hover:-translate-y-2 transition-all duration-300 shadow-card-soft hover:shadow-card-hover group"
+          class="relative flex flex-col bg-white border border-slate-200/90 rounded-[2rem] p-7 sm:p-8 hover:border-sky-400 hover:-translate-y-2 transition-all duration-300 shadow-card-soft hover:shadow-card-hover group"
         >
-          <!-- Top Section: Icon & Category Tag -->
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <div
-                class="w-14 h-14 rounded-full bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center group-hover:bg-sky-600 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm"
-              >
-                <component :is="getFeatureIcon(item.icon)" class="w-7 h-7 stroke-[2]" />
-              </div>
-              <span class="text-[11px] font-extrabold text-sky-600 bg-sky-50/80 border border-sky-100 px-3 py-1 rounded-full uppercase tracking-wider">
-                {{ item.tag }}
-              </span>
-            </div>
-
-            <!-- Title & Rich Description -->
-            <h4 class="text-xl font-extrabold text-slate-900 mb-3 group-hover:text-sky-700 transition-colors">
-              {{ item.title }}
-            </h4>
-            <p class="text-sm text-slate-600 leading-relaxed mb-6">
-              {{ item.description }}
-            </p>
+          <!-- Circular Icon (rounded-full) -->
+          <div
+            class="w-14 h-14 rounded-full bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-gradient-to-tr group-hover:from-sky-600 group-hover:to-cyan-500 group-hover:text-white group-hover:scale-110 transition-all duration-300 shadow-sm"
+          >
+            <component :is="getFeatureIcon(item.icon)" class="w-7 h-7 stroke-[2]" />
           </div>
 
-          <!-- Bottom Highlight Badge (Shadcn style) -->
-          <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
-            <span class="inline-flex items-center gap-1.5 font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
-              <CheckCircle2 class="w-3.5 h-3.5 text-emerald-600" />
-              <span>{{ item.highlight }}</span>
-            </span>
-            <span class="text-slate-400 group-hover:text-sky-600 transition-colors font-bold text-sm">
-              →
-            </span>
+          <!-- Title & Description -->
+          <div class="space-y-2.5">
+            <h4 class="text-xl font-extrabold text-slate-900 group-hover:text-sky-700 transition-colors">
+              {{ item.title }}
+            </h4>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              {{ item.description }}
+            </p>
           </div>
         </Card>
       </div>
