@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import logoImg from '@/assets/logo.png'
+import logoPng from '@/assets/logo.png'
+import logoWebp from '@/assets/logo.webp'
 
 defineProps<{
   size?: 'sm' | 'md' | 'lg'
@@ -9,13 +10,20 @@ defineProps<{
 
 <template>
   <div class="flex items-center gap-3 select-none group cursor-pointer">
-    <!-- Official Logo Image with smooth hover scale and shadow -->
+    <!-- Official Logo Image with WebP/PNG picture tag and zero CLS dimensions -->
     <div class="relative flex items-center justify-center">
-      <img
-        :src="logoImg"
-        alt="GidroGo Logo"
-        class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
-      />
+      <picture>
+        <source :srcset="logoWebp" type="image/webp" />
+        <img
+          :src="logoPng"
+          alt="GidroGo Logo"
+          width="160"
+          height="107"
+          fetchpriority="high"
+          decoding="async"
+          class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-md"
+        />
+      </picture>
     </div>
 
     <!-- Text Logo -->

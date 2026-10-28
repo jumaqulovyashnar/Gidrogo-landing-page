@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, defineAsyncComponent } from 'vue'
 import Navbar from '@/widgets/navbar/ui/Navbar.vue'
 import HeroSection from '@/widgets/hero/ui/HeroSection.vue'
 import ProblemsSection from '@/widgets/problems/ui/ProblemsSection.vue'
@@ -10,8 +10,12 @@ import TwoSidesSection from '@/widgets/two-sides/ui/TwoSidesSection.vue'
 import FullDashboardSection from '@/widgets/full-dashboard/ui/FullDashboardSection.vue'
 import CtaSection from '@/widgets/stats-cta/ui/CtaSection.vue'
 import Footer from '@/widgets/footer/ui/Footer.vue'
-import DemoRequestModal from '@/features/demo-request/ui/DemoRequestModal.vue'
 import FloatingWaterDrops from '@/shared/ui/animation/FloatingWaterDrops.vue'
+
+// Lazy-load modal to reduce initial bundle size and boost First Contentful Paint
+const DemoRequestModal = defineAsyncComponent(
+  () => import('@/features/demo-request/ui/DemoRequestModal.vue')
+)
 
 const demoModalRef = ref<InstanceType<typeof DemoRequestModal> | null>(null)
 
