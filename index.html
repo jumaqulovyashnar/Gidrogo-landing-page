@@ -2,20 +2,72 @@
 <html lang="uz" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z'/></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GidroGo — Suv yetkazib berish biznesini yagona tizimda boshqaring</title>
-    <meta name="description" content="GidroGo - Suv yetkazib berish korxonalari uchun avtomatlashtirilgan CRM va ERP tizimi. Buyurtma, kuryer, kassa va ombor yagona platformada." />
+    <title>GidroGo — Suv yetkazib berish biznesini boshqarish platformasi</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="GidroGo — Suv yetkazib berish biznesini boshqarish platformasi" />
+    <meta name="description" content="GidroGo — Suv yetkazib beruvchi korxonalar uchun yagona aqlli tizim. Buyurtmalar, kuryerlar GPS monitoringi, ombor balansi va onlayn to'lovlarni bir joyda avtomatlashtiring." />
+    <meta name="keywords" content="suv yetkazib berish, suv yetkazib berish dasturi, gidrogo, suv crm, suv erp, kuryer monitoring, suv biznesi, suv dostavka dasturi, suv korxonalari" />
+    <meta name="author" content="GidroGo Inc." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0284c7" />
+    <link rel="canonical" href="https://gidrogo.uz" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gidrogo.uz" />
+    <meta property="og:title" content="GidroGo — Suv yetkazib berish biznesini boshqarish platformasi" />
+    <meta property="og:description" content="Buyurtmalar, haydovchilar marshruti, bo'sh baklar va kassa tushumini yagona tizimda boshqaring." />
+    <meta property="og:image" content="https://gidrogo.uz/og-image.png" />
+    <meta property="og:locale" content="uz_UZ" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://gidrogo.uz" />
+    <meta name="twitter:title" content="GidroGo — Suv yetkazib berish biznesini boshqarish platformasi" />
+    <meta name="twitter:description" content="Suv korxonalari uchun avtomatlashtirilgan aqlli dastur." />
+    <meta name="twitter:image" content="https://gidrogo.uz/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230284c7'><path d='M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z'/></svg>" />
+
+    <!-- Google Sans Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/google-sans">
+
+    <!-- JSON-LD Structured Data for Google SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "GidroGo",
+      "operatingSystem": "Web, Android, iOS",
+      "applicationCategory": "BusinessApplication",
+      "description": "Suv yetkazib berish biznesi uchun to'liq avtomatlashtirilgan boshqaruv va ERP tizimi.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "UZS",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "128"
+      }
+    }
+    </script>
+
     <style>
-      body {
-        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      body, button, input, select, textarea {
+        font-family: 'Google Sans', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       }
     </style>
   </head>
-  <body class="bg-white text-slate-900 antialiased">
+  <body class="bg-white text-slate-900 antialiased selection:bg-sky-100 selection:text-sky-900">
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>

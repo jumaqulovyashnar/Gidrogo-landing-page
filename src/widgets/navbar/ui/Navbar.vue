@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import GidroGoLogo from '@/shared/ui/icon/GidroGoLogo.vue'
 import { Button } from '@/shared/ui/button'
-import { Menu, X, ArrowRight } from 'lucide-vue-next'
+import { Menu, X, ArrowRight, Phone } from 'lucide-vue-next'
 
 const emit = defineEmits<{
   (e: 'open-demo'): void
@@ -12,9 +12,10 @@ const isMobileMenuOpen = ref(false)
 
 const navLinks = [
   { name: 'Bosh sahifa', href: '#top' },
+  { name: 'Muammolar', href: '#problems' },
+  { name: 'Yechim', href: '#solution' },
   { name: 'Imkoniyatlar', href: '#features' },
   { name: 'Qanday ishlaydi', href: '#how-it-works' },
-  { name: 'Biz uchun', href: '#problems' },
   { name: 'FAQ', href: '#faq' },
 ]
 
@@ -28,33 +29,48 @@ const scrollTo = (href: string) => {
 </script>
 
 <template>
-  <header class="fixed top-4 left-0 right-0 z-40 px-4 sm:px-6">
-    <div
-      class="max-w-6xl mx-auto glass-nav border border-slate-200/80 rounded-full px-5 py-2.5 md:py-3 shadow-lg shadow-sky-950/5 flex items-center justify-between transition-all"
-    >
-      <!-- Logo -->
-      <a href="#top" class="flex items-center">
+  <!-- Full-width (100% W) Modern Enterprise Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-xs transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Left: Logo -->
+      <a href="#top" class="flex items-center flex-shrink-0">
         <GidroGoLogo />
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-7">
-        <a
-          v-for="link in navLinks"
-          :key="link.name"
-          :href="link.href"
-          @click.prevent="scrollTo(link.href)"
-          class="text-sm font-semibold text-slate-600 hover:text-sky-600 transition-colors"
-        >
-          {{ link.name }}
-        </a>
+      <!-- Middle: Desktop Nav Links (with smooth bottom blue border on hover) -->
+      <nav class="hidden md:flex items-center h-full">
+        <ul class="flex items-center gap-7 lg:gap-9 h-full">
+          <li
+            v-for="link in navLinks"
+            :key="link.name"
+            class="h-full flex items-center"
+          >
+            <a
+              :href="link.href"
+              @click.prevent="scrollTo(link.href)"
+              class="relative h-full flex items-center text-sm font-bold text-slate-700 hover:text-sky-600 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2.5px] after:bg-sky-600 after:transition-all after:duration-250 after:rounded-t-full cursor-pointer"
+            >
+              {{ link.name }}
+            </a>
+          </li>
+        </ul>
       </nav>
 
-      <!-- Right CTA Button -->
-      <div class="hidden sm:flex items-center gap-3">
+      <!-- Right: Direct Phone & Demo CTA Button -->
+      <div class="hidden sm:flex items-center gap-5">
+        <a
+          href="tel:+998941782402"
+          class="hidden lg:flex items-center gap-2 text-xs font-bold text-slate-600 hover:text-sky-600 transition-colors"
+        >
+          <div class="w-7 h-7 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center">
+            <Phone class="w-3.5 h-3.5" />
+          </div>
+          <span>+998 (94) 178-24-02</span>
+        </a>
+
         <Button
           @click="emit('open-demo')"
-          class="rounded-full px-6 font-semibold shadow-md shadow-sky-600/30 flex items-center gap-2 group"
+          class="rounded-xl px-6 py-2.5 font-bold shadow-md shadow-sky-600/25 flex items-center gap-2 group"
         >
           <span>Demo olish</span>
           <ArrowRight class="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -64,8 +80,8 @@ const scrollTo = (href: string) => {
       <!-- Mobile Hamburger Button -->
       <button
         @click="isMobileMenuOpen = !isMobileMenuOpen"
-        class="md:hidden p-2 rounded-full text-slate-700 hover:bg-slate-100 focus:outline-none"
-        aria-label="Menyu"
+        class="md:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none"
+        aria-label="Menyuni ochish"
       >
         <Menu v-if="!isMobileMenuOpen" class="w-6 h-6" />
         <X v-else class="w-6 h-6" />
@@ -75,21 +91,32 @@ const scrollTo = (href: string) => {
     <!-- Mobile Dropdown Menu -->
     <div
       v-if="isMobileMenuOpen"
-      class="md:hidden mt-2 max-w-6xl mx-auto bg-white/95 backdrop-blur-xl border border-slate-200/90 rounded-3xl p-5 shadow-2xl flex flex-col gap-3 animate-in fade-in slide-in-from-top-3"
+      class="md:hidden w-full bg-white border-b border-slate-200 px-6 py-5 shadow-xl flex flex-col gap-3 animate-in fade-in slide-in-from-top-2"
     >
-      <a
-        v-for="link in navLinks"
-        :key="link.name"
-        :href="link.href"
-        @click.prevent="scrollTo(link.href)"
-        class="py-2 px-3 text-base font-semibold text-slate-700 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-colors"
-      >
-        {{ link.name }}
-      </a>
-      <div class="pt-2 border-t border-slate-100">
+      <ul class="flex flex-col gap-1">
+        <li v-for="link in navLinks" :key="link.name">
+          <a
+            :href="link.href"
+            @click.prevent="scrollTo(link.href)"
+            class="block py-2.5 px-3 text-base font-bold text-slate-800 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-colors"
+          >
+            {{ link.name }}
+          </a>
+        </li>
+      </ul>
+
+      <div class="pt-4 border-t border-slate-100 flex flex-col gap-3">
+        <a
+          href="tel:+998941782402"
+          class="flex items-center gap-2 text-sm font-bold text-slate-700 px-3"
+        >
+          <Phone class="w-4 h-4 text-sky-600" />
+          <span>+998 (94) 178-24-02</span>
+        </a>
+
         <Button
           @click="emit('open-demo'); isMobileMenuOpen = false"
-          class="w-full rounded-full py-3 font-semibold shadow-md shadow-sky-600/25 flex items-center justify-center gap-2"
+          class="w-full rounded-xl py-3 font-bold shadow-md shadow-sky-600/25 flex items-center justify-center gap-2"
         >
           <span>Demo olish</span>
           <ArrowRight class="w-4 h-4" />
