@@ -34,10 +34,7 @@ const getIcon = (name: string) => {
   <section id="problems" class="py-20 md:py-28 relative bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
-      <div class="max-w-3xl mb-14 md:mb-18 space-y-4">
-        <span class="text-xs md:text-sm font-bold tracking-widest text-sky-600 uppercase">
-          Haqiqiy muammolar
-        </span>
+      <div class="max-w-3xl mx-auto text-center mb-14 md:mb-18 space-y-4">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.2]">
           Suv yetkazib berish biznesini qo‘lda boshqarish qiyin.
         </h2>

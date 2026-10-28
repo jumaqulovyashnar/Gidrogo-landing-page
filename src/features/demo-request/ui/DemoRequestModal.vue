@@ -50,7 +50,7 @@ defineExpose({
           <Sparkles class="w-3.5 h-3.5 text-sky-600" />
           <span>Sinov muddati — 14 kun bepul</span>
         </div>
-        <h3 class="text-2xl font-bold text-slate-900">GidroGo demosiga yoziling</h3>
+        <h3 class="text-2xl font-bold text-slate-900">GidroGo tizimiga ulaning</h3>
         <p class="text-sm text-slate-500 mt-1">
           Ma'lumotlaringizni qoldiring, mutaxassisimiz 15 daqiqa ichida siz bilan bog‘lanib tizimni ko‘rsatib beradi.
         </p>
@@ -108,7 +108,7 @@ defineExpose({
           class="w-full py-3 text-base font-semibold shadow-lg shadow-sky-600/25 flex items-center justify-center gap-2 mt-2"
         >
           <Send class="w-4 h-4" />
-          <span>{{ isLoading ? 'Yuborilmoqda...' : 'Bepul demo olish' }}</span>
+          <span>{{ isLoading ? 'Yuborilmoqda...' : 'Ariza yuborish' }}</span>
         </Button>
       </form>
     </div>

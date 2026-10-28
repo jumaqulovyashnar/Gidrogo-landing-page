@@ -41,7 +41,7 @@ const handleFormSubmit = async () => {
       <FlowingWaterWave />
     </div>
 
-    <section id="demo" class="py-20 md:py-28 bg-gradient-to-r from-sky-600 via-sky-500 to-blue-600 text-white relative overflow-hidden">
+    <section id="contact" class="py-20 md:py-28 bg-gradient-to-r from-sky-600 via-sky-500 to-blue-600 text-white relative overflow-hidden">
     <!-- Subtle Grid Pattern & Ambient Lighting -->
     <div class="absolute inset-0 bg-grid-pattern opacity-15 pointer-events-none"></div>
 
@@ -69,7 +69,7 @@ const handleFormSubmit = async () => {
           <!-- 3 Checkpoints (Matches Screenshot) -->
           <div class="flex flex-wrap items-center gap-x-6 gap-y-3 pt-4 text-xs sm:text-sm font-semibold text-white">
             <span class="flex items-center gap-2">
-              <Check class="w-4 h-4 text-cyan-300 stroke-[3]" /> Shaxsiy demo
+              <Check class="w-4 h-4 text-cyan-300 stroke-[3]" /> Bepul o‘rnatish
             </span>
             <span class="flex items-center gap-2">
               <Check class="w-4 h-4 text-cyan-300 stroke-[3]" /> Biznesingizga mos tahlil
@@ -128,7 +128,7 @@ const handleFormSubmit = async () => {
                 size="lg"
                 class="w-full bg-sky-600 hover:bg-sky-500 text-white font-bold py-3.5 rounded-2xl shadow-lg shadow-sky-600/30 flex items-center justify-center gap-2 group"
               >
-                <span>{{ isLoading ? 'Yuborilmoqda...' : 'Demo so‘rovini yuborish' }}</span>
+                <span>{{ isLoading ? 'Yuborilmoqda...' : 'Ariza yuborish' }}</span>
                 <ArrowRight class="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Button>
 
@@ -146,7 +146,7 @@ const handleFormSubmit = async () => {
               </div>
               <h4 class="text-xl font-bold text-slate-900">So‘rovingiz qabul qilindi!</h4>
               <p class="text-sm text-slate-500 max-w-xs mx-auto">
-                Tez orada mutaxassisimiz siz bilan bog‘lanib, shaxsiy demoni taqdim etadi.
+                Tez orada mutaxassisimiz siz bilan bog‘lanib, tizimni ko‘rsatib beradi.
               </p>
               <Button variant="outline" @click="isSubmitted = false; form = { name: '', phone: '', message: '' }" class="mt-3">
                 Yana yuborish

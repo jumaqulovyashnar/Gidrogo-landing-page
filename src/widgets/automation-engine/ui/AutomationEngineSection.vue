@@ -217,9 +217,6 @@ const getFeatureIcon = (name: string) => {
 
       <!-- Section Title for Features Grid -->
       <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-        <span class="text-xs font-bold tracking-widest text-sky-600 uppercase">
-          Ekotizim imkoniyatlari
-        </span>
         <h3 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
           Barcha jarayonlarni qamrab oluvchi kuchli vositalar
         </h3>

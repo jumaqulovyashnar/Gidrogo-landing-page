@@ -54,7 +54,7 @@ const scrollTo = (href: string) => {
         </ul>
       </nav>
 
-      <!-- Right: Direct Phone & Demo CTA Button -->
+      <!-- Right: Direct Phone & CTA Button -->
       <div class="hidden sm:flex items-center gap-5">
         <a
           href="tel:+998941782402"
@@ -70,7 +70,7 @@ const scrollTo = (href: string) => {
           @click="emit('open-demo')"
           class="rounded-xl px-6 py-2.5 font-bold shadow-md shadow-sky-600/25 flex items-center gap-2 group"
         >
-          <span>Demo olish</span>
+          <span>Tizimga ulanish</span>
           <ArrowRight class="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </Button>
       </div>
@@ -116,7 +116,7 @@ const scrollTo = (href: string) => {
           @click="emit('open-demo'); isMobileMenuOpen = false"
           class="w-full rounded-xl py-3 font-bold shadow-md shadow-sky-600/25 flex items-center justify-center gap-2"
         >
-          <span>Demo olish</span>
+          <span>Tizimga ulanish</span>
           <ArrowRight class="w-4 h-4" />
         </Button>
       </div>

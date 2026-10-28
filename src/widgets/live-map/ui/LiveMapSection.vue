@@ -13,37 +13,58 @@ import {
 <template>
   <section class="py-20 md:py-28 bg-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <!-- Left Content (Matches Screenshot 2) -->
-        <div class="lg:col-span-5 space-y-6">
-          <span class="text-xs md:text-sm font-bold tracking-widest text-sky-600 uppercase">
-            Jonli yetkazib berish
-          </span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.15]">
-            Har bir buyurtma — xaritada, nazorat ostida.
-          </h2>
-          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
-            Ferma, dastavkachi va mijoz bitta oqimda. Buyurtma holati real vaqtda ko‘rinadi.
-          </p>
+      <!-- Section Header -->
+      <div class="max-w-3xl mx-auto text-center space-y-4 mb-14 md:mb-16">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.15]">
+          Har bir buyurtma — xaritada, nazorat ostida.
+        </h2>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          Ferma, dastavkachi va mijoz bitta oqimda. Buyurtma holati real vaqtda ko‘rinadi.
+        </p>
+      </div>
 
-          <div class="space-y-3 pt-2">
-            <div class="flex items-center gap-3 text-slate-800 font-semibold text-sm sm:text-base">
-              <div class="w-6 h-6 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0">
-                <Check class="w-3.5 h-3.5 stroke-[3]" />
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left Key Features Column -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 space-y-2">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0">
+                <Check class="w-4 h-4 stroke-[3]" />
               </div>
-              <span>Mos dastavkachini aniqlash</span>
+              <h4 class="text-base font-bold text-slate-900">Mos dastavkachini aniqlash</h4>
             </div>
-            <div class="flex items-center gap-3 text-slate-800 font-semibold text-sm sm:text-base">
-              <div class="w-6 h-6 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0">
-                <Check class="w-3.5 h-3.5 stroke-[3]" />
+            <p class="text-xs sm:text-sm text-slate-500 pl-11">
+              Eng yaqin va zaxirasida suv bo'lgan kuryerga buyurtma avtomatik uzatiladi.
+            </p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 space-y-2">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0">
+                <Check class="w-4 h-4 stroke-[3]" />
               </div>
-              <span>Yo‘nalish va holat monitoringi</span>
+              <h4 class="text-base font-bold text-slate-900">Yo‘nalish va holat monitoringi</h4>
             </div>
+            <p class="text-xs sm:text-sm text-slate-500 pl-11">
+              Kuryer harakati, tirbandliklar va qolgan vaqt jonli xaritada ko'rinadi.
+            </p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 space-y-2">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0">
+                <Check class="w-4 h-4 stroke-[3]" />
+              </div>
+              <h4 class="text-base font-bold text-slate-900">Bo'sh idishlar balansi</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-500 pl-11">
+              Har bir topshirishda bo'sh baklar darhol ro'yxatga olinadi va hisobga o'tadi.
+            </p>
           </div>
         </div>
 
         <!-- Right Map Simulation Card (Matches Screenshot 2) -->
-        <div class="lg:col-span-7">
+        <div class="lg:col-span-8">
           <div
             class="relative w-full aspect-[4/3] sm:aspect-[16/11] bg-sky-50/40 border border-sky-100 rounded-3xl p-6 sm:p-8 overflow-hidden shadow-2xl shadow-sky-900/5"
           >

@@ -19,13 +19,13 @@ const emit = defineEmits<{
   <section class="py-20 md:py-28 bg-slate-50/50 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
-      <div class="max-w-3xl mb-14 md:mb-18 space-y-4">
-        <span class="text-xs md:text-sm font-bold tracking-widest text-sky-600 uppercase">
-          Ikki tomon, bitta tajriba
-        </span>
+      <div class="max-w-3xl mx-auto text-center mb-14 md:mb-18 space-y-4">
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.2]">
           Biznes uchun nazorat. Mijoz uchun qulaylik.
         </h2>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          Boshqaruv paneli orqali butun korxonani boshqaring yoki mijozlar uchun qulay buyurtma berish tizimini taqdim eting.
+        </p>
       </div>
 
       <!-- Two Large Experience Cards (Matches Screenshot 3) -->

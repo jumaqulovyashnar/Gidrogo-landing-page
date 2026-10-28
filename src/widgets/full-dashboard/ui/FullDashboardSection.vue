@@ -41,9 +41,6 @@ const recentDeliveries = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header (Matches Screenshot 4) -->
       <div class="max-w-3xl mx-auto text-center space-y-4 mb-14 md:mb-20">
-        <span class="text-xs md:text-sm font-bold tracking-widest text-sky-600 uppercase">
-          Aniq qarorlar
-        </span>
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.2]">
           Biznesingizni raqamlar bilan boshqaring.
         </h2>

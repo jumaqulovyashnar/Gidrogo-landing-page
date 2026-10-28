@@ -127,10 +127,10 @@ const scrollToSection = (id: string) => {
               </a>
             </li>
 
-            <!-- Demo Olish -->
+            <!-- Tizimga ulanish -->
             <li class="pt-1">
               <button @click="emit('open-demo')" class="text-sky-400 hover:text-sky-300 font-semibold transition-colors flex items-center gap-1.5">
-                <span>Demo olish</span>
+                <span>Tizimga ulanish</span>
                 <span>→</span>
               </button>
             </li>

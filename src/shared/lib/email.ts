@@ -26,7 +26,7 @@ export async function sendDemoEmail(data: EmailParams): Promise<boolean> {
       from_name: data.name,
       user_phone: data.phone,
       company_name: data.company || "Ko'rsatilmadi",
-      message: data.message || "GidroGo demo so'rovi",
+      message: data.message || "GidroGo tizimiga ulanish arizasi",
       to_email: 'jumaqulovyashnar35@gmail.com',
     }
 

@@ -53,7 +53,7 @@ const scrollToHowItWorks = () => {
             size="lg"
             class="w-full sm:w-auto rounded-xl px-8 py-3.5 text-base font-bold shadow-xl shadow-sky-600/25 group flex items-center justify-center gap-2"
           >
-            <span>Bepul demo olish</span>
+            <span>Bepul sinab ko‘rish</span>
             <ArrowRight class="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Button>
 
