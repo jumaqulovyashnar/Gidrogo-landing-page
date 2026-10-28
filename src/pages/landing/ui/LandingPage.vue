@@ -9,7 +9,6 @@ import LiveMapSection from '@/widgets/live-map/ui/LiveMapSection.vue'
 import TwoSidesSection from '@/widgets/two-sides/ui/TwoSidesSection.vue'
 import FullDashboardSection from '@/widgets/full-dashboard/ui/FullDashboardSection.vue'
 import CtaSection from '@/widgets/stats-cta/ui/CtaSection.vue'
-import FaqSection from '@/widgets/faq/ui/FaqSection.vue'
 import Footer from '@/widgets/footer/ui/Footer.vue'
 import DemoRequestModal from '@/features/demo-request/ui/DemoRequestModal.vue'
 import FloatingWaterDrops from '@/shared/ui/animation/FloatingWaterDrops.vue'
@@ -53,9 +52,6 @@ const openDemoModal = () => {
 
       <!-- Key Business Stats & High-Impact CTA -->
       <CtaSection @open-demo="openDemoModal" />
-
-      <!-- Frequently Asked Questions -->
-      <FaqSection />
     </main>
 
     <!-- Footer -->

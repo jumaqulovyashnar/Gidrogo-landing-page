@@ -73,8 +73,8 @@ const scrollToSection = (id: string) => {
               </a>
             </li>
             <li>
-              <a href="#faq" @click.prevent="scrollToSection('#faq')" class="hover:text-sky-400 transition-colors">
-                FAQ
+              <a href="#how-it-works" @click.prevent="scrollToSection('#how-it-works')" class="hover:text-sky-400 transition-colors">
+                Bosqichlar
               </a>
             </li>
           </ul>

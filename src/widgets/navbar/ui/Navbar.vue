@@ -15,7 +15,6 @@ const navLinks = [
   { name: 'Muammolar', href: '#problems' },
   { name: 'Imkoniyatlar', href: '#features' },
   { name: 'Qanday ishlaydi', href: '#how-it-works' },
-  { name: 'FAQ', href: '#faq' },
 ]
 
 const scrollTo = (href: string) => {
