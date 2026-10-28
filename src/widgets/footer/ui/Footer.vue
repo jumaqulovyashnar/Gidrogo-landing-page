@@ -24,7 +24,7 @@ const scrollToSection = (id: string) => {
         <!-- Brand column (lg:col-span-5) -->
         <div class="lg:col-span-5 space-y-4">
           <div class="flex items-center">
-            <GidroGoLogo />
+            <GidroGoLogo light />
           </div>
           <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
             Suv yetkazib berish biznesi uchun yangi avlod boshqaruv tizimi. Barcha jarayonlar yagona tizimda.

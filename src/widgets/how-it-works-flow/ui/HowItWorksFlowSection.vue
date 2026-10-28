@@ -7,51 +7,66 @@ import {
   CreditCard,
   BarChart3,
   ArrowRight,
+  CheckCircle2,
+  Sparkles,
 } from 'lucide-vue-next'
+import { Card } from '@/shared/ui/card'
 
 const steps = [
   {
     number: '01',
     title: 'Mijoz buyurtma beradi',
+    description: 'Telegram bot, mobil ilova yoki operator orqali mijoz o‘z manzilini tanlab 2 bosishda buyurtma yuboradi.',
+    tag: 'Oson buyurtma',
     icon: PhoneCall,
   },
   {
     number: '02',
     title: 'Tizim qabul qiladi',
+    description: 'Markaziy platforma buyurtmani soniyalar ichida ro‘yxatdan o‘tkazib, ombordagi suv zaxirasini tekshiradi.',
+    tag: 'Tezkor tasdiq',
     icon: PackageCheck,
   },
   {
     number: '03',
     title: 'Dastavkachi aniqlanadi',
+    description: 'GPS algoritmi eng yaqin masofadagi va yuk xonasida suv bor bo‘lgan eng mos kuryerni avtomatik belgilaydi.',
+    tag: 'Smart taqsimot',
     icon: UserCheck,
   },
   {
     number: '04',
     title: 'Suv yetkaziladi',
+    description: 'Kuryer optimal tirbandliksiz marshrut bo‘yicha toza ichimlik suvini mijoz eshigigacha tezkor yetkazib beradi.',
+    tag: 'Jonli yetkazuv',
     icon: Truck,
   },
   {
     number: '05',
     title: 'To‘lov amalga oshadi',
+    description: 'Payme, Click, Uzum yoki naqd pul to‘lovi qabul qilinib, bo‘sh baklar soni hisobi avtomatik yangilanadi.',
+    tag: 'Kassa nazorati',
     icon: CreditCard,
   },
   {
     number: '06',
     title: 'Ma’lumot saqlanadi',
+    description: 'Mijoz ma’lumotlari, kunlik tushum, kuryerlar KPI ko‘rsatkichi va sof foyda hisobotda to‘liq qayd etiladi.',
+    tag: 'Avtomatik hisobot',
     icon: BarChart3,
   },
 ]
 </script>
 
 <template>
-  <section class="py-20 md:py-28 bg-[#030e21] text-white relative overflow-hidden">
+  <section id="how-it-works" class="py-20 md:py-32 bg-[#030e21] text-white relative overflow-hidden">
     <!-- Ambient backdrops -->
     <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-sky-600/15 blur-3xl pointer-events-none"></div>
     <div class="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-cyan-500/15 blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <!-- Section Header (Matches Screenshot 1) -->
-      <div class="max-w-3xl mb-14 md:mb-18 space-y-4">
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-16 md:mb-20 space-y-4">
         <span class="text-xs md:text-sm font-bold tracking-widest text-sky-400 uppercase">
           Oddiy va aqlli oqim
         </span>
@@ -59,43 +74,56 @@ const steps = [
           GidroGo qanday ishlaydi?
         </h2>
         <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
-          Buyurtma kelganidan boshlab biznes statistikasi shakllanguncha — olti bog‘langan bosqich.
+          Buyurtma kelganidan boshlab biznes statistikasi shakllanguncha — olti bog‘langan qulay bosqich.
         </p>
       </div>
 
-      <!-- 6 Interconnected Steps Flow -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 items-center">
-        <template v-for="(step, index) in steps" :key="step.number">
-          <!-- Step Card -->
-          <div
-            class="relative bg-[#081730]/90 border border-slate-800/90 rounded-2xl p-4 sm:p-5 flex flex-col justify-between h-48 sm:h-52 hover:border-sky-500/60 hover:bg-[#0c1f40] transition-all duration-300 group shadow-lg shadow-black/20"
-          >
-            <!-- Step Number -->
-            <div class="text-[11px] font-bold text-slate-400 group-hover:text-sky-400 transition-colors">
-              {{ step.number }}
+      <!-- Spacious Responsive 3x2 Shadcn Card Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <Card
+          v-for="step in steps"
+          :key="step.number"
+          class="relative bg-[#081834]/90 backdrop-blur-xl border border-slate-800/90 rounded-[2rem] p-7 sm:p-8 hover:border-sky-500/70 hover:-translate-y-2 hover:shadow-2xl hover:shadow-sky-500/15 transition-all duration-300 group flex flex-col justify-between overflow-hidden"
+        >
+          <!-- Subtle Top Gradient Glow on Hover -->
+          <div class="absolute -top-16 -right-16 w-36 h-36 rounded-full bg-sky-500/10 blur-2xl group-hover:bg-sky-500/25 transition-all duration-300 pointer-events-none"></div>
+
+          <div>
+            <!-- Top Bar: Icon & Step Number -->
+            <div class="flex items-center justify-between mb-6">
+              <div
+                class="w-14 h-14 rounded-2xl bg-sky-950/80 border border-sky-800/60 text-sky-400 flex items-center justify-center group-hover:bg-sky-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-md shadow-black/30"
+              >
+                <component :is="step.icon" class="w-7 h-7 stroke-[2]" />
+              </div>
+
+              <!-- Large Watermark Number -->
+              <span class="text-3xl font-black text-slate-700/80 group-hover:text-sky-400 transition-colors">
+                {{ step.number }}
+              </span>
             </div>
 
-            <!-- Icon in rounded square -->
-            <div
-              class="w-11 h-11 rounded-xl bg-slate-800/80 border border-slate-700/60 text-sky-400 flex items-center justify-center group-hover:bg-sky-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm"
-            >
-              <component :is="step.icon" class="w-5 h-5 stroke-[2]" />
-            </div>
-
-            <!-- Step Title -->
-            <h4 class="text-xs sm:text-sm font-bold text-slate-100 leading-snug group-hover:text-white transition-colors">
+            <!-- Title & Description -->
+            <h4 class="text-xl font-extrabold text-white mb-3 group-hover:text-sky-300 transition-colors">
               {{ step.title }}
             </h4>
-
-            <!-- Connecting Arrow Pill on Desktop (Except last item) -->
-            <div
-              v-if="index < steps.length - 1"
-              class="hidden lg:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 w-6 h-6 rounded-full bg-cyan-400 text-slate-900 items-center justify-center shadow-md shadow-cyan-400/30"
-            >
-              <ArrowRight class="w-3.5 h-3.5 stroke-[2.5]" />
-            </div>
+            <p class="text-sm text-slate-400 leading-relaxed mb-6 group-hover:text-slate-300 transition-colors">
+              {{ step.description }}
+            </p>
           </div>
-        </template>
+
+          <!-- Bottom Footer Tag -->
+          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="inline-flex items-center gap-1.5 font-bold text-sky-400 bg-sky-950/60 border border-sky-800/50 px-3 py-1 rounded-full">
+              <Sparkles class="w-3.5 h-3.5 text-sky-400" />
+              <span>{{ step.tag }}</span>
+            </span>
+
+            <span class="text-slate-500 group-hover:text-sky-400 font-bold transition-colors">
+              Bosqich {{ step.number }} →
+            </span>
+          </div>
+        </Card>
       </div>
     </div>
   </section>

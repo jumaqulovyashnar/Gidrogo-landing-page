@@ -17,6 +17,7 @@ import {
 } from 'lucide-vue-next'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/shared/ui/card'
 import { featuresList } from '@/entities/feature/model/data'
+import logoImg from '@/assets/logo.png'
 
 const activeNode = ref<'buyurtma' | 'ferma' | 'dastavkachi' | 'dashboard' | 'engine'>('engine')
 
@@ -163,12 +164,9 @@ const getFeatureIcon = (name: string) => {
               <div class="absolute w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-sky-100/70"></div>
 
               <div
-                class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-tr from-sky-600 via-sky-500 to-cyan-400 p-1 shadow-xl shadow-sky-500/40 flex items-center justify-center text-white"
+                class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-white p-2.5 shadow-2xl shadow-sky-500/30 border border-sky-100 flex items-center justify-center group-hover:scale-105 transition-all duration-300"
               >
-                <div class="w-full h-full rounded-full bg-sky-600 flex flex-col items-center justify-center">
-                  <Truck class="w-8 h-8 text-white stroke-[2.2]" />
-                  <Droplet class="w-3.5 h-3.5 text-cyan-200 fill-cyan-200 -mt-1" />
-                </div>
+                <img :src="logoImg" alt="GidroGo Engine" class="w-full h-full object-contain filter drop-shadow" />
               </div>
             </div>
 
