@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { Dialog } from '@/shared/ui/dialog'
 import { Button } from '@/shared/ui/button'
 import { CheckCircle2, Phone, Building2, User, Send, Sparkles } from 'lucide-vue-next'
+import { sendDemoEmail } from '@/shared/lib/email'
 
 const isOpen = ref(false)
 const isSubmitted = ref(false)
@@ -14,15 +15,18 @@ const form = ref({
   company: '',
 })
 
-const handleSubmit = () => {
+const handleSubmit = async () => {
   isLoading.value = true
-  setTimeout(() => {
+  try {
+    await sendDemoEmail({
+      name: form.value.name,
+      phone: form.value.phone,
+      company: form.value.company,
+    })
+  } finally {
     isLoading.value = false
     isSubmitted.value = true
-    setTimeout(() => {
-      // reset after feedback
-    }, 2000)
-  }, 700)
+  }
 }
 
 const reset = () => {

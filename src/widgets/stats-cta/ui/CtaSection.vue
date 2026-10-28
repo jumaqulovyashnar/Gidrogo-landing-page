@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { Check, ArrowRight, ShieldCheck, Send, CheckCircle2 } from 'lucide-vue-next'
 import { Button } from '@/shared/ui/button'
+import { sendDemoEmail } from '@/shared/lib/email'
 
 const emit = defineEmits<{
   (e: 'open-demo'): void
@@ -16,12 +17,19 @@ const form = ref({
 const isSubmitted = ref(false)
 const isLoading = ref(false)
 
-const handleFormSubmit = () => {
+const handleFormSubmit = async () => {
+  if (!form.value.name || !form.value.phone) return
   isLoading.value = true
-  setTimeout(() => {
+  try {
+    await sendDemoEmail({
+      name: form.value.name,
+      phone: form.value.phone,
+      message: form.value.message,
+    })
+  } finally {
     isLoading.value = false
     isSubmitted.value = true
-  }, 600)
+  }
 }
 </script>
 
