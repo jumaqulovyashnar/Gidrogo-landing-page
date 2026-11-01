@@ -49,9 +49,9 @@ const getFeatureIcon = (name: string) => {
 <template>
   <section id="how-it-works" class="py-20 md:py-28 relative bg-white overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- The Central Architecture Hub (Matches Screenshot 5) -->
+      <!-- The Central Architecture Hub (Enlarged Card Container with shadcn inner cards) -->
       <div
-        class="relative max-w-4xl mx-auto bg-slate-50/70 border border-sky-100 rounded-[2.5rem] p-6 sm:p-10 md:p-16 mb-20 shadow-2xl shadow-sky-900/5"
+        class="relative max-w-5xl lg:max-w-6xl mx-auto bg-gradient-to-b from-slate-50/90 to-sky-50/30 border border-sky-100 rounded-[2.5rem] p-6 sm:p-10 md:p-14 lg:p-16 mb-24 shadow-2xl shadow-sky-900/5"
       >
         <!-- Background Grid inside hub container -->
         <div class="absolute inset-0 bg-grid-pattern opacity-40 rounded-[2.5rem] pointer-events-none"></div>
@@ -60,7 +60,7 @@ const getFeatureIcon = (name: string) => {
         <svg
           class="hidden md:block absolute inset-0 w-full h-full pointer-events-none z-0"
           preserveAspectRatio="none"
-          viewBox="0 0 800 450"
+          viewBox="0 0 900 480"
         >
           <defs>
             <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
@@ -72,10 +72,10 @@ const getFeatureIcon = (name: string) => {
 
           <!-- Top-Left (Buyurtma) to Center -->
           <line
-            x1="240"
-            y1="130"
-            x2="400"
-            y2="225"
+            x1="280"
+            y1="140"
+            x2="450"
+            y2="240"
             stroke="url(#lineGrad)"
             stroke-width="3"
             stroke-dasharray="8 6"
@@ -84,10 +84,10 @@ const getFeatureIcon = (name: string) => {
 
           <!-- Bottom-Left (Ferma) to Center -->
           <line
-            x1="240"
-            y1="320"
-            x2="400"
-            y2="225"
+            x1="280"
+            y1="340"
+            x2="450"
+            y2="240"
             stroke="url(#lineGrad)"
             stroke-width="3"
             stroke-dasharray="8 6"
@@ -96,10 +96,10 @@ const getFeatureIcon = (name: string) => {
 
           <!-- Center to Top-Right (Dastavkachi) -->
           <line
-            x1="400"
-            y1="225"
-            x2="560"
-            y2="130"
+            x1="450"
+            y1="240"
+            x2="620"
+            y2="140"
             stroke="url(#lineGrad)"
             stroke-width="3"
             stroke-dasharray="8 6"
@@ -108,10 +108,10 @@ const getFeatureIcon = (name: string) => {
 
           <!-- Center to Bottom-Right (Dashboard) -->
           <line
-            x1="400"
-            y1="225"
-            x2="560"
-            y2="320"
+            x1="450"
+            y1="240"
+            x2="620"
+            y2="340"
             stroke="url(#lineGrad)"
             stroke-width="3"
             stroke-dasharray="8 6"
@@ -120,52 +120,52 @@ const getFeatureIcon = (name: string) => {
         </svg>
 
         <!-- Nodes Layout: 2 Columns on Mobile, 3 on Desktop -->
-        <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 items-center">
           <!-- Left Column Nodes -->
           <div class="flex flex-col gap-6 md:gap-14">
-            <!-- Node: KIRISH -> Buyurtma -->
-            <div
+            <!-- Node: KIRISH -> Buyurtma (shadcn Card) -->
+            <Card
               @mouseenter="activeNode = 'buyurtma'"
               :class="[
-                'bg-white border rounded-2xl p-4 sm:p-5 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-md shadow-sky-950/5',
-                activeNode === 'buyurtma' ? 'border-sky-500 ring-2 ring-sky-100 scale-102' : 'border-slate-200 hover:border-sky-300'
+                'p-5 sm:p-6 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-md rounded-2xl',
+                activeNode === 'buyurtma' ? 'border-sky-500 ring-2 ring-sky-100 scale-102 bg-white' : 'border-slate-200 bg-white hover:border-sky-300'
               ]"
             >
-              <div class="w-11 h-11 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
                 <PhoneCall class="w-5 h-5" />
               </div>
               <div>
-                <span class="text-[10px] font-bold tracking-wider text-slate-400 uppercase block">KIRISH</span>
-                <h4 class="text-base font-bold text-slate-900">Buyurtma</h4>
+                <span class="text-xs font-bold tracking-wider text-slate-400 uppercase block">KIRISH</span>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900">Buyurtma</h4>
               </div>
-            </div>
+            </Card>
 
-            <!-- Node: MANBA -> Ferma -->
-            <div
+            <!-- Node: MANBA -> Ferma (shadcn Card) -->
+            <Card
               @mouseenter="activeNode = 'ferma'"
               :class="[
-                'bg-white border rounded-2xl p-4 sm:p-5 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-md shadow-sky-950/5',
-                activeNode === 'ferma' ? 'border-sky-500 ring-2 ring-sky-100 scale-102' : 'border-slate-200 hover:border-sky-300'
+                'p-5 sm:p-6 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-md rounded-2xl',
+                activeNode === 'ferma' ? 'border-sky-500 ring-2 ring-sky-100 scale-102 bg-white' : 'border-slate-200 bg-white hover:border-sky-300'
               ]"
             >
-              <div class="w-11 h-11 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
                 <Warehouse class="w-5 h-5" />
               </div>
               <div>
-                <span class="text-[10px] font-bold tracking-wider text-slate-400 uppercase block">MANBA</span>
-                <h4 class="text-base font-bold text-slate-900">Ferma / Ombor</h4>
+                <span class="text-xs font-bold tracking-wider text-slate-400 uppercase block">MANBA</span>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900">Ferma / Ombor</h4>
               </div>
-            </div>
+            </Card>
           </div>
 
           <!-- Central Core Node: GidroGo Engine -->
           <div class="flex flex-col items-center justify-center my-4 md:my-0">
             <div class="relative flex items-center justify-center">
-              <div class="absolute w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-sky-200/50 animate-ping opacity-30"></div>
-              <div class="absolute w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-sky-100/70"></div>
+              <div class="absolute w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-sky-200/40 animate-ping opacity-25"></div>
+              <div class="absolute w-32 h-32 sm:w-40 sm:h-40 rounded-3xl bg-sky-100/60"></div>
 
               <div
-                class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-white p-2.5 shadow-2xl shadow-sky-500/30 border border-sky-100 flex items-center justify-center group-hover:scale-105 transition-all duration-300"
+                class="relative w-28 h-28 sm:w-34 sm:h-34 rounded-3xl bg-white p-3 shadow-2xl shadow-sky-500/30 border border-sky-100 flex items-center justify-center hover:scale-105 transition-all duration-300"
               >
                 <picture class="w-full h-full flex items-center justify-center">
                   <source :srcset="logoWebp" type="image/webp" />
@@ -182,83 +182,85 @@ const getFeatureIcon = (name: string) => {
               </div>
             </div>
 
-            <div class="text-center mt-3">
-              <h3 class="text-xl font-black text-slate-900 tracking-tight">GidroGo</h3>
-              <span class="text-[10px] font-extrabold tracking-widest text-sky-600 uppercase">AUTOMATION ENGINE</span>
+            <div class="text-center mt-4">
+              <h3 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">GidroGo</h3>
+              <span class="text-[11px] font-extrabold tracking-widest text-sky-600 uppercase">AUTOMATION ENGINE</span>
             </div>
           </div>
 
           <!-- Right Column Nodes -->
           <div class="flex flex-col gap-6 md:gap-14">
-            <!-- Node: NATIJA -> Dastavkachi -->
-            <div
+            <!-- Node: NATIJA -> Dastavkachi (shadcn Card) -->
+            <Card
               @mouseenter="activeNode = 'dastavkachi'"
               :class="[
-                'bg-white border rounded-2xl p-4 sm:p-5 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-md shadow-sky-950/5',
-                activeNode === 'dastavkachi' ? 'border-sky-500 ring-2 ring-sky-100 scale-102' : 'border-slate-200 hover:border-sky-300'
+                'p-5 sm:p-6 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-md rounded-2xl',
+                activeNode === 'dastavkachi' ? 'border-sky-500 ring-2 ring-sky-100 scale-102 bg-white' : 'border-slate-200 bg-white hover:border-sky-300'
               ]"
             >
-              <div class="w-11 h-11 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
                 <Truck class="w-5 h-5" />
               </div>
               <div>
-                <span class="text-[10px] font-bold tracking-wider text-slate-400 uppercase block">NATIJA</span>
-                <h4 class="text-base font-bold text-slate-900">Dastavkachi</h4>
+                <span class="text-xs font-bold tracking-wider text-slate-400 uppercase block">NATIJA</span>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900">Dastavkachi</h4>
               </div>
-            </div>
+            </Card>
 
-            <!-- Node: TAHLIL -> Dashboard -->
-            <div
+            <!-- Node: TAHLIL -> Dashboard (shadcn Card) -->
+            <Card
               @mouseenter="activeNode = 'dashboard'"
               :class="[
-                'bg-white border rounded-2xl p-4 sm:p-5 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-md shadow-sky-950/5',
-                activeNode === 'dashboard' ? 'border-sky-500 ring-2 ring-sky-100 scale-102' : 'border-slate-200 hover:border-sky-300'
+                'p-5 sm:p-6 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-md rounded-2xl',
+                activeNode === 'dashboard' ? 'border-sky-500 ring-2 ring-sky-100 scale-102 bg-white' : 'border-slate-200 bg-white hover:border-sky-300'
               ]"
             >
-              <div class="w-11 h-11 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
                 <BarChart3 class="w-5 h-5" />
               </div>
               <div>
-                <span class="text-[10px] font-bold tracking-wider text-slate-400 uppercase block">TAHLIL</span>
-                <h4 class="text-base font-bold text-slate-900">Dashboard</h4>
+                <span class="text-xs font-bold tracking-wider text-slate-400 uppercase block">TAHLIL</span>
+                <h4 class="text-base sm:text-lg font-bold text-slate-900">Dashboard</h4>
               </div>
-            </div>
+            </Card>
           </div>
         </div>
       </div>
 
       <!-- Section Title for Features Grid -->
-      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-        <h3 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
           Barcha jarayonlarni qamrab oluvchi kuchli vositalar
         </h3>
-        <p class="text-base text-slate-600">
+        <p class="text-sm sm:text-base text-slate-600">
           Suv yetkazib berish korxonangiz uchun maxsus ishlab chiqilgan 8 ta asosiy avtomatlashtirish moduli.
         </p>
       </div>
 
-      <!-- Premium Large Shadcn Cards Grid (Clean, No Badges) -->
-      <div id="features" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Responsive Grid for Features Cards (Mobile 1 col, Tablet 2 cols, Desktop 4 cols) -->
+      <div id="features" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
         <Card
           v-for="item in featuresList"
           :key="item.id"
-          class="relative flex flex-col bg-white border border-slate-200/90 rounded-[2rem] p-7 sm:p-8 hover:border-sky-400 hover:-translate-y-2 transition-all duration-300 shadow-card-soft hover:shadow-card-hover group"
+          class="relative flex flex-col justify-between bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-7 hover:border-sky-400 hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 group"
         >
-          <!-- Circular Icon (rounded-full) -->
-          <div
-            class="w-14 h-14 rounded-full bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-gradient-to-tr group-hover:from-sky-600 group-hover:to-cyan-500 group-hover:text-white group-hover:scale-110 transition-all duration-300 shadow-sm"
-          >
-            <component :is="getFeatureIcon(item.icon)" class="w-7 h-7 stroke-[2]" />
-          </div>
+          <div>
+            <!-- Normal shape icon (rounded-2xl) -->
+            <div
+              class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center mb-5 group-hover:bg-gradient-to-tr group-hover:from-sky-600 group-hover:to-cyan-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm"
+            >
+              <component :is="getFeatureIcon(item.icon)" class="w-6 h-6 stroke-[2]" />
+            </div>
 
-          <!-- Title & Description -->
-          <div class="space-y-2.5">
-            <h4 class="text-xl font-extrabold text-slate-900 group-hover:text-sky-700 transition-colors">
-              {{ item.title }}
-            </h4>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              {{ item.description }}
-            </p>
+            <!-- Standardized 2 Font Sizes: Title & Description -->
+            <div class="space-y-2">
+              <h4 class="text-lg font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
+                {{ item.title }}
+              </h4>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                {{ item.description }}
+              </p>
+            </div>
           </div>
         </Card>
       </div>

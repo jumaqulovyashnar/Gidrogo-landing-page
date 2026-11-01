@@ -10,7 +10,6 @@ import TwoSidesSection from '@/widgets/two-sides/ui/TwoSidesSection.vue'
 import FullDashboardSection from '@/widgets/full-dashboard/ui/FullDashboardSection.vue'
 import CtaSection from '@/widgets/stats-cta/ui/CtaSection.vue'
 import Footer from '@/widgets/footer/ui/Footer.vue'
-import FloatingWaterDrops from '@/shared/ui/animation/FloatingWaterDrops.vue'
 
 // Lazy-load modal to reduce initial bundle size and boost First Contentful Paint
 const DemoRequestModal = defineAsyncComponent(
@@ -26,9 +25,6 @@ const openDemoModal = () => {
 
 <template>
   <div class="min-h-screen bg-white text-slate-900 font-sans selection:bg-sky-100 selection:text-sky-900 relative">
-    <!-- 3D Glossy Floating Water Droplets from Left and Right -->
-    <FloatingWaterDrops />
-
     <!-- Navigation Bar -->
     <Navbar @open-demo="openDemoModal" />
 

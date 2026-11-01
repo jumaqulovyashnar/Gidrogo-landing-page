@@ -53,16 +53,16 @@ const getIcon = (name: string) => {
           <!-- Subtle Top Gradient Glow on Hover -->
           <div class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-sky-400/10 blur-2xl group-hover:bg-sky-400/25 transition-all duration-300 pointer-events-none"></div>
 
-          <!-- Icon box with water ripple reflection (rounded-full) -->
+          <!-- Icon box with normal shape (rounded-2xl) -->
           <div
-            class="w-14 h-14 rounded-full bg-sky-50 border border-sky-100/90 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-gradient-to-tr group-hover:from-sky-600 group-hover:to-cyan-500 group-hover:text-white group-hover:scale-110 transition-all duration-300 shadow-sm"
+            class="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-100/90 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-gradient-to-tr group-hover:from-sky-600 group-hover:to-cyan-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm"
           >
             <component :is="getIcon(item.icon)" class="w-6 h-6 stroke-[2]" />
           </div>
 
-          <!-- Content -->
+          <!-- Content (Clean 2 Font Sizes) -->
           <div class="space-y-2 mb-8">
-            <h3 class="text-lg md:text-xl font-bold text-slate-900 group-hover:text-sky-700 transition-colors">
+            <h3 class="text-lg font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
               {{ item.title }}
             </h3>
             <p class="text-sm text-slate-600 leading-relaxed">

@@ -1,13 +1,38 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import {
-  CheckCircle2,
   Warehouse,
   MapPin,
   Truck,
   Navigation,
   Check,
-  ShieldCheck,
+  RefreshCw,
+  Sparkles,
 } from 'lucide-vue-next'
+import { Card } from '@/shared/ui/card'
+
+const activeFeature = ref(0)
+
+const mapFeatures = [
+  {
+    id: 0,
+    title: 'Mos dastavkachini aniqlash',
+    description: 'Eng yaqin va zaxirasida yetarli suv bo‘lgan kuryerga buyurtma avtomatik uzatiladi.',
+    icon: Sparkles,
+  },
+  {
+    id: 1,
+    title: 'Yo‘nalish va holat monitoringi',
+    description: 'Kuryer harakati, tirbandliklar va qolgan vaqt jonli xaritada aniq ko‘rinadi.',
+    icon: Navigation,
+  },
+  {
+    id: 2,
+    title: 'Bo‘sh idishlar balansi',
+    description: 'Har bir topshirishda bo‘sh baklar darhol ro‘yxatga olinadi va hisobga o‘tadi.',
+    icon: RefreshCw,
+  },
+]
 </script>
 
 <template>
@@ -23,57 +48,60 @@ import {
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <!-- Left Key Features Column -->
-        <div class="lg:col-span-4 space-y-4">
-          <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 space-y-2">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0">
-                <Check class="w-4 h-4 stroke-[3]" />
-              </div>
-              <h4 class="text-base font-bold text-slate-900">Mos dastavkachini aniqlash</h4>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <!-- Left Key Features Column (Premium Shadcn Cards) -->
+        <div class="lg:col-span-5 space-y-4">
+          <Card
+            v-for="(item, index) in mapFeatures"
+            :key="item.id"
+            @mouseenter="activeFeature = index"
+            :class="[
+              'p-5 sm:p-6 transition-all duration-300 cursor-pointer rounded-2xl border flex items-start gap-4 group',
+              activeFeature === index
+                ? 'bg-white border-sky-400 ring-2 ring-sky-100 shadow-card-hover -translate-y-0.5'
+                : 'bg-white border-slate-200/90 hover:border-sky-300 hover:shadow-card-soft'
+            ]"
+          >
+            <!-- Normal shape icon (rounded-xl) -->
+            <div
+              :class="[
+                'w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 border',
+                activeFeature === index
+                  ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/25 scale-105'
+                  : 'bg-sky-50 text-sky-600 border-sky-100 group-hover:bg-sky-100'
+              ]"
+            >
+              <component :is="item.icon" class="w-5 h-5 stroke-[2]" />
             </div>
-            <p class="text-xs sm:text-sm text-slate-500 pl-11">
-              Eng yaqin va zaxirasida suv bo'lgan kuryerga buyurtma avtomatik uzatiladi.
-            </p>
-          </div>
 
-          <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 space-y-2">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0">
-                <Check class="w-4 h-4 stroke-[3]" />
-              </div>
-              <h4 class="text-base font-bold text-slate-900">Yo‘nalish va holat monitoringi</h4>
+            <!-- Standardized 2 Font Sizes: Title & Description -->
+            <div class="space-y-1.5 flex-1">
+              <h4
+                :class="[
+                  'text-base sm:text-lg font-bold transition-colors',
+                  activeFeature === index ? 'text-sky-700' : 'text-slate-900 group-hover:text-sky-600'
+                ]"
+              >
+                {{ item.title }}
+              </h4>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                {{ item.description }}
+              </p>
             </div>
-            <p class="text-xs sm:text-sm text-slate-500 pl-11">
-              Kuryer harakati, tirbandliklar va qolgan vaqt jonli xaritada ko'rinadi.
-            </p>
-          </div>
-
-          <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 space-y-2">
-            <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0">
-                <Check class="w-4 h-4 stroke-[3]" />
-              </div>
-              <h4 class="text-base font-bold text-slate-900">Bo'sh idishlar balansi</h4>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-500 pl-11">
-              Har bir topshirishda bo'sh baklar darhol ro'yxatga olinadi va hisobga o'tadi.
-            </p>
-          </div>
+          </Card>
         </div>
 
-        <!-- Right Map Simulation Card (Matches Screenshot 2) -->
-        <div class="lg:col-span-8">
+        <!-- Right Map Simulation Card (Matches Screenshot 1) -->
+        <div class="lg:col-span-7">
           <div
-            class="relative w-full aspect-[4/3] sm:aspect-[16/11] bg-sky-50/40 border border-sky-100 rounded-3xl p-6 sm:p-8 overflow-hidden shadow-2xl shadow-sky-900/5"
+            class="relative w-full aspect-[4/3] sm:aspect-[16/11] bg-gradient-to-br from-sky-50/50 via-slate-50/70 to-sky-50/30 border border-sky-100 rounded-3xl p-6 sm:p-8 overflow-hidden shadow-2xl shadow-sky-900/5"
           >
             <!-- Map Grid & Ambient Blobs -->
-            <div class="absolute inset-0 bg-grid-pattern opacity-60"></div>
-            <div class="absolute -top-10 -left-10 w-44 h-44 rounded-full bg-sky-200/50 blur-2xl pointer-events-none"></div>
-            <div class="absolute -bottom-10 -right-10 w-48 h-48 rounded-full bg-cyan-200/50 blur-2xl pointer-events-none"></div>
+            <div class="absolute inset-0 bg-grid-pattern opacity-50"></div>
+            <div class="absolute -top-10 -left-10 w-44 h-44 rounded-3xl bg-sky-200/40 blur-2xl pointer-events-none"></div>
+            <div class="absolute -bottom-10 -right-10 w-48 h-48 rounded-3xl bg-cyan-200/40 blur-2xl pointer-events-none"></div>
 
-            <!-- Road lines layout (clean white street layout like in screenshot 2) -->
+            <!-- Road lines layout (clean street layout) -->
             <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 500 350" preserveAspectRatio="none">
               <!-- Main Road Diagonal -->
               <line x1="-20" y1="230" x2="450" y2="130" stroke="#ffffff" stroke-width="26" stroke-linecap="round" />
@@ -87,19 +115,19 @@ import {
                 d="M130,230 Q 230,210 300,200 T 400,190"
                 fill="none"
                 stroke="#0284c7"
-                stroke-width="2.5"
+                stroke-width="3"
                 stroke-dasharray="6 6"
               />
             </svg>
 
             <!-- Floating Pill 1: Top Right "Buyurtma #1042" -->
             <div
-              class="absolute top-6 right-6 sm:top-8 sm:right-10 bg-white/95 backdrop-blur-md border border-slate-100 shadow-md shadow-slate-900/5 rounded-2xl px-3.5 py-2 flex items-center gap-2 z-20 animate-float"
+              class="absolute top-6 right-6 sm:top-8 sm:right-10 bg-white/95 backdrop-blur-md border border-slate-200/80 shadow-md shadow-slate-900/5 rounded-2xl px-3.5 py-2 flex items-center gap-2 z-20 animate-float"
               style="animation-duration: 4s;"
             >
               <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               <div>
-                <p class="text-[9px] uppercase tracking-wider text-slate-400 font-semibold">Buyurtma</p>
+                <p class="text-[9px] uppercase tracking-wider text-slate-400 font-bold">Buyurtma</p>
                 <p class="text-xs font-bold text-slate-800">#1042</p>
               </div>
             </div>
@@ -108,10 +136,10 @@ import {
             <div
               class="absolute left-8 sm:left-14 top-1/2 -translate-y-4 z-20 flex flex-col items-center gap-1.5"
             >
-              <div class="w-12 h-12 rounded-full bg-sky-600 text-white flex items-center justify-center shadow-lg shadow-sky-600/30">
+              <div class="w-12 h-12 rounded-2xl bg-sky-600 text-white flex items-center justify-center shadow-lg shadow-sky-600/30">
                 <Warehouse class="w-6 h-6" />
               </div>
-              <span class="text-xs font-bold text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 rounded-full border border-slate-100 shadow-2xs">
+              <span class="text-xs font-bold text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 rounded-xl border border-slate-200/80 shadow-2xs">
                 Ferma
               </span>
             </div>
@@ -120,7 +148,7 @@ import {
             <div
               class="absolute left-[54%] top-[45%] -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center gap-1 animate-pulse"
             >
-              <div class="relative w-12 h-12 rounded-full bg-sky-600 text-white flex items-center justify-center shadow-xl shadow-sky-600/40">
+              <div class="relative w-12 h-12 rounded-2xl bg-sky-600 text-white flex items-center justify-center shadow-xl shadow-sky-600/40">
                 <Truck class="w-6 h-6" />
                 <span class="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-cyan-300 ring-2 ring-white"></span>
               </div>
@@ -130,36 +158,36 @@ import {
             <div
               class="absolute right-12 sm:right-20 top-[40%] z-20 flex flex-col items-center gap-1.5"
             >
-              <div class="w-11 h-11 rounded-full bg-slate-900 text-white flex items-center justify-center shadow-lg shadow-slate-900/25">
+              <div class="w-11 h-11 rounded-2xl bg-slate-900 text-white flex items-center justify-center shadow-lg shadow-slate-900/25">
                 <MapPin class="w-5 h-5 text-sky-400" />
               </div>
-              <span class="text-xs font-bold text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 rounded-full border border-slate-100 shadow-2xs">
+              <span class="text-xs font-bold text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-0.5 rounded-xl border border-slate-200/80 shadow-2xs">
                 Mijoz
               </span>
             </div>
 
             <!-- Floating Pill 2: Bottom Left "Dastavkachi Topildi" -->
             <div
-              class="absolute bottom-6 left-6 sm:bottom-8 sm:left-10 bg-white/95 backdrop-blur-md border border-slate-100 shadow-md shadow-slate-900/5 rounded-2xl px-3.5 py-2 flex items-center gap-2.5 z-20"
+              class="absolute bottom-6 left-6 sm:bottom-8 sm:left-10 bg-white/95 backdrop-blur-md border border-slate-200/80 shadow-md shadow-slate-900/5 rounded-2xl px-3.5 py-2 flex items-center gap-2.5 z-20"
             >
-              <div class="w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <div class="w-6 h-6 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
                 <Check class="w-4 h-4 stroke-[3]" />
               </div>
               <div>
-                <p class="text-[9px] uppercase tracking-wider text-slate-400 font-semibold">Dastavkachi</p>
+                <p class="text-[9px] uppercase tracking-wider text-slate-400 font-bold">Dastavkachi</p>
                 <p class="text-xs font-bold text-slate-800">Topildi</p>
               </div>
             </div>
 
             <!-- Floating Pill 3: Bottom Right "Yetkazib berish: Yo'lda · 12 daq" -->
             <div
-              class="absolute bottom-6 right-6 sm:bottom-8 sm:right-10 bg-white/95 backdrop-blur-md border border-slate-100 shadow-md shadow-slate-900/5 rounded-2xl px-3.5 py-2 flex items-center gap-2.5 z-20"
+              class="absolute bottom-6 right-6 sm:bottom-8 sm:right-10 bg-white/95 backdrop-blur-md border border-slate-200/80 shadow-md shadow-slate-900/5 rounded-2xl px-3.5 py-2 flex items-center gap-2.5 z-20"
             >
-              <div class="w-6 h-6 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center">
+              <div class="w-6 h-6 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center">
                 <Navigation class="w-4 h-4 stroke-[2]" />
               </div>
               <div>
-                <p class="text-[9px] uppercase tracking-wider text-slate-400 font-semibold">Yetkazib berish</p>
+                <p class="text-[9px] uppercase tracking-wider text-slate-400 font-bold">Yetkazib berish</p>
                 <p class="text-xs font-bold text-slate-800">Yo‘lda · 12 daq</p>
               </div>
             </div>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import GidroGoLogo from '@/shared/ui/icon/GidroGoLogo.vue'
-import { ArrowUp, Phone } from 'lucide-vue-next'
+import { ArrowUp } from 'lucide-vue-next'
 
 const emit = defineEmits<{
   (e: 'open-demo'): void
@@ -84,29 +84,23 @@ const scrollToSection = (id: string) => {
         <div class="lg:col-span-3 space-y-3">
           <h4 class="text-sm font-bold text-slate-200">Aloqa</h4>
           <ul class="space-y-3 text-xs sm:text-sm text-slate-400">
-            <!-- Phone 1: +998 94 178 24 02 -->
+            <!-- Phone 1: +998 94 178 24 02 (Clean without icon) -->
             <li>
               <a
                 href="tel:+998941782402"
-                class="flex items-center gap-2.5 text-slate-300 hover:text-sky-400 transition-colors font-medium group"
+                class="inline-block text-slate-300 hover:text-sky-400 transition-colors font-medium"
               >
-                <div class="w-7 h-7 rounded-full bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400 group-hover:bg-sky-500 group-hover:text-white transition-colors">
-                  <Phone class="w-3.5 h-3.5" />
-                </div>
-                <span>+998 (94) 178-24-02</span>
+                +998 (94) 178-24-02
               </a>
             </li>
 
-            <!-- Phone 2: +998 99 571 31 13 -->
+            <!-- Phone 2: +998 99 571 31 13 (Clean without icon) -->
             <li>
               <a
                 href="tel:+998995713113"
-                class="flex items-center gap-2.5 text-slate-300 hover:text-sky-400 transition-colors font-medium group"
+                class="inline-block text-slate-300 hover:text-sky-400 transition-colors font-medium"
               >
-                <div class="w-7 h-7 rounded-full bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400 group-hover:bg-sky-500 group-hover:text-white transition-colors">
-                  <Phone class="w-3.5 h-3.5" />
-                </div>
-                <span>+998 (99) 571-31-13</span>
+                +998 (99) 571-31-13
               </a>
             </li>
 
@@ -118,7 +112,7 @@ const scrollToSection = (id: string) => {
                 rel="noopener noreferrer"
                 class="flex items-center gap-2.5 text-slate-300 hover:text-sky-400 transition-colors font-medium group"
               >
-                <div class="w-7 h-7 rounded-full bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400 group-hover:bg-sky-500 group-hover:text-white transition-colors">
+                <div class="w-6 h-6 rounded-lg bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                     <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.196 1.006.128.832.941z"/>
                   </svg>

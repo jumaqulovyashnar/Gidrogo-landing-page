@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import GidroGoLogo from '@/shared/ui/icon/GidroGoLogo.vue'
 import { Button } from '@/shared/ui/button'
-import { Menu, X, ArrowRight, Phone } from 'lucide-vue-next'
+import { Menu, X, ArrowRight } from 'lucide-vue-next'
 
 const emit = defineEmits<{
   (e: 'open-demo'): void
@@ -27,17 +27,17 @@ const scrollTo = (href: string) => {
 </script>
 
 <template>
-  <!-- Full-width (100% W) Modern Enterprise Navbar -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-xs transition-all">
+  <!-- Full-width Modern Enterprise Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Left: Logo -->
       <a href="#top" class="flex items-center flex-shrink-0">
         <GidroGoLogo />
       </a>
 
-      <!-- Middle: Desktop Nav Links (with smooth bottom blue border on hover) -->
+      <!-- Middle: Desktop Nav Links (Standardized Font & Sizes) -->
       <nav class="hidden md:flex items-center h-full">
-        <ul class="flex items-center gap-7 lg:gap-9 h-full">
+        <ul class="flex items-center gap-8 lg:gap-10 h-full">
           <li
             v-for="link in navLinks"
             :key="link.name"
@@ -46,7 +46,7 @@ const scrollTo = (href: string) => {
             <a
               :href="link.href"
               @click.prevent="scrollTo(link.href)"
-              class="relative h-full flex items-center text-sm font-bold text-slate-700 hover:text-sky-600 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2.5px] after:bg-sky-600 after:transition-all after:duration-250 after:rounded-t-full cursor-pointer"
+              class="relative h-full flex items-center text-sm font-semibold text-slate-600 hover:text-sky-600 transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2.5px] after:bg-sky-600 after:transition-all after:duration-250 after:rounded-t-full cursor-pointer"
             >
               {{ link.name }}
             </a>
@@ -54,21 +54,11 @@ const scrollTo = (href: string) => {
         </ul>
       </nav>
 
-      <!-- Right: Direct Phone & CTA Button -->
-      <div class="hidden sm:flex items-center gap-5">
-        <a
-          href="tel:+998941782402"
-          class="hidden lg:flex items-center gap-2 text-xs font-bold text-slate-600 hover:text-sky-600 transition-colors"
-        >
-          <div class="w-7 h-7 rounded-full bg-sky-50 text-sky-600 flex items-center justify-center">
-            <Phone class="w-3.5 h-3.5" />
-          </div>
-          <span>+998 (94) 178-24-02</span>
-        </a>
-
+      <!-- Right: Pure CTA Button (Clean, No Phone Number) -->
+      <div class="hidden sm:flex items-center">
         <Button
           @click="emit('open-demo')"
-          class="rounded-xl px-6 py-2.5 font-bold shadow-md shadow-sky-600/25 flex items-center gap-2 group"
+          class="rounded-xl px-6 py-2.5 text-sm font-bold shadow-md shadow-sky-600/20 flex items-center gap-2 group transition-all"
         >
           <span>Tizimga ulanish</span>
           <ArrowRight class="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -96,25 +86,17 @@ const scrollTo = (href: string) => {
           <a
             :href="link.href"
             @click.prevent="scrollTo(link.href)"
-            class="block py-2.5 px-3 text-base font-bold text-slate-800 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-colors"
+            class="block py-2.5 px-3 text-base font-semibold text-slate-800 hover:text-sky-600 hover:bg-sky-50 rounded-xl transition-colors"
           >
             {{ link.name }}
           </a>
         </li>
       </ul>
 
-      <div class="pt-4 border-t border-slate-100 flex flex-col gap-3">
-        <a
-          href="tel:+998941782402"
-          class="flex items-center gap-2 text-sm font-bold text-slate-700 px-3"
-        >
-          <Phone class="w-4 h-4 text-sky-600" />
-          <span>+998 (94) 178-24-02</span>
-        </a>
-
+      <div class="pt-3 border-t border-slate-100 flex flex-col">
         <Button
           @click="emit('open-demo'); isMobileMenuOpen = false"
-          class="w-full rounded-xl py-3 font-bold shadow-md shadow-sky-600/25 flex items-center justify-center gap-2"
+          class="w-full rounded-xl py-3 text-sm font-bold shadow-md shadow-sky-600/20 flex items-center justify-center gap-2"
         >
           <span>Tizimga ulanish</span>
           <ArrowRight class="w-4 h-4" />

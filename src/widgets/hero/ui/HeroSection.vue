@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { ArrowRight, ChevronDown, ShieldCheck, CheckCircle2, TrendingUp, Users, Zap } from 'lucide-vue-next'
+import { ArrowRight, ChevronDown } from 'lucide-vue-next'
 import { Button } from '@/shared/ui/button'
-import WaterDropletStream from '@/shared/ui/animation/WaterDropletStream.vue'
 import FlowingWaterWave from '@/shared/ui/animation/FlowingWaterWave.vue'
 
 const emit = defineEmits<{
@@ -23,11 +22,6 @@ const scrollToHowItWorks = () => {
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center mb-10 md:mb-14">
       <div class="space-y-7 max-w-3xl mx-auto">
-        <!-- Animated Live Water Stream Indicator -->
-        <div class="flex items-center justify-center">
-          <WaterDropletStream />
-        </div>
-
         <!-- Main Title -->
         <h1
           class="text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 tracking-tight leading-[1.12]"
@@ -66,22 +60,6 @@ const scrollToHowItWorks = () => {
             <span>Qanday ishlaydi</span>
             <ChevronDown class="w-4 h-4 text-slate-400 group-hover:translate-y-0.5 transition-transform" />
           </Button>
-        </div>
-
-        <!-- Trust Badges Row -->
-        <div class="pt-3 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-500 font-medium">
-          <span class="flex items-center gap-1.5">
-            <ShieldCheck class="w-4 h-4 text-emerald-500" />
-            14 kun bepul sinov davri
-          </span>
-          <span class="flex items-center gap-1.5">
-            <CheckCircle2 class="w-4 h-4 text-emerald-500" />
-            Karta kiritish shart emas
-          </span>
-          <span class="flex items-center gap-1.5">
-            <Zap class="w-4 h-4 text-sky-500" />
-            15 daqiqada to‘liq ulanish
-          </span>
         </div>
 
         <!-- 3 Highlight Metrics Pills -->
