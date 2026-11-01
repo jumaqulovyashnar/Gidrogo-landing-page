@@ -28,7 +28,7 @@ export const featuresList: FeatureItem[] = [
     id: 'f3',
     title: 'Real-time GPS tracking',
     description: 'Kuryerlarning shahar bo‘ylab harakati, mijoz manziliga yetib borish vaqti va xaritadagi marshruti to‘liq nazorat ostida.',
-    tag: 'Jonli monitoring',
+    tag: 'Real-vaqt nazorati',
     icon: 'Navigation',
     highlight: 'Aniq xarita nazorati',
   },

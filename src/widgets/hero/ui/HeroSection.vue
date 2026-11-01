@@ -21,22 +21,19 @@ const scrollToHowItWorks = () => {
     ></div>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center mb-10 md:mb-14">
-      <div class="space-y-7 max-w-3xl mx-auto">
-        <!-- Main Title -->
+      <div class="space-y-6 max-w-4xl mx-auto">
+        <!-- Main Title (Strict 2 Lines) -->
         <h1
-          class="text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 tracking-tight leading-[1.12]"
+          class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.18]"
         >
-          Suv yetkazib berish biznesingizni
-          <span
-            class="block bg-gradient-to-r from-sky-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent pb-1"
-          >
-            yagona tizimda
+          <span class="block">Suv yetkazib berish biznesingizni</span>
+          <span class="block mt-1 sm:mt-2">
+            <span class="bg-gradient-to-r from-sky-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent">yagona tizimda</span> boshqaring.
           </span>
-          boshqaring.
         </h1>
 
         <!-- Concise Meaningful Subtitle -->
-        <p class="text-base sm:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
           Buyurtmalar, kuryerlar GPS marshruti, bo‘sh idishlar hisobi va onlayn to‘lovlar bir joyda. Shaffof nazorat va 2 baravar tezkor yetkazuv.
         </p>
 

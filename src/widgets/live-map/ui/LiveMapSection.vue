@@ -23,7 +23,7 @@ const mapFeatures = [
   {
     id: 1,
     title: 'Yo‘nalish va holat monitoringi',
-    description: 'Kuryer harakati, tirbandliklar va qolgan vaqt jonli xaritada aniq ko‘rinadi.',
+    description: 'Kuryer harakati, tirbandliklar va qolgan vaqt xaritada real vaqtda aniq ko‘rinadi.',
     icon: Navigation,
   },
   {

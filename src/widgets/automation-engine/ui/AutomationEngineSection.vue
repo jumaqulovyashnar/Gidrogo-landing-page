@@ -47,20 +47,20 @@ const getFeatureIcon = (name: string) => {
 </script>
 
 <template>
-  <section id="how-it-works" class="py-20 md:py-28 relative bg-white overflow-hidden">
+  <section id="how-it-works" class="py-14 md:py-20 relative bg-white overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- The Central Architecture Hub (Enlarged Card Container with shadcn inner cards) -->
+      <!-- The Central Architecture Hub (Salgina kattaroq, Spacious & Balanced) -->
       <div
-        class="relative max-w-5xl lg:max-w-6xl mx-auto bg-gradient-to-b from-slate-50/90 to-sky-50/30 border border-sky-100 rounded-[2.5rem] p-6 sm:p-10 md:p-14 lg:p-16 mb-24 shadow-2xl shadow-sky-900/5"
+        class="relative max-w-5xl lg:max-w-6xl mx-auto bg-slate-50/50 border border-slate-200/90 rounded-3xl p-8 sm:p-10 md:p-12 lg:p-14 min-h-[460px] md:min-h-[520px] flex items-center justify-center mb-16 shadow-lg shadow-sky-950/5"
       >
         <!-- Background Grid inside hub container -->
-        <div class="absolute inset-0 bg-grid-pattern opacity-40 rounded-[2.5rem] pointer-events-none"></div>
+        <div class="absolute inset-0 bg-grid-pattern opacity-60 rounded-3xl pointer-events-none"></div>
 
         <!-- Flow connecting SVG lines for desktop -->
         <svg
           class="hidden md:block absolute inset-0 w-full h-full pointer-events-none z-0"
           preserveAspectRatio="none"
-          viewBox="0 0 900 480"
+          viewBox="0 0 940 500"
         >
           <defs>
             <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
@@ -73,69 +73,69 @@ const getFeatureIcon = (name: string) => {
           <!-- Top-Left (Buyurtma) to Center -->
           <line
             x1="280"
-            y1="140"
-            x2="450"
-            y2="240"
+            y1="125"
+            x2="470"
+            y2="250"
             stroke="url(#lineGrad)"
-            stroke-width="3"
-            stroke-dasharray="8 6"
+            stroke-width="2.5"
+            stroke-dasharray="7 5"
             class="animate-water-stream"
           />
 
           <!-- Bottom-Left (Ferma) to Center -->
           <line
             x1="280"
-            y1="340"
-            x2="450"
-            y2="240"
+            y1="375"
+            x2="470"
+            y2="250"
             stroke="url(#lineGrad)"
-            stroke-width="3"
-            stroke-dasharray="8 6"
+            stroke-width="2.5"
+            stroke-dasharray="7 5"
             class="animate-water-stream"
           />
 
           <!-- Center to Top-Right (Dastavkachi) -->
           <line
-            x1="450"
-            y1="240"
-            x2="620"
-            y2="140"
+            x1="470"
+            y1="250"
+            x2="660"
+            y2="125"
             stroke="url(#lineGrad)"
-            stroke-width="3"
-            stroke-dasharray="8 6"
+            stroke-width="2.5"
+            stroke-dasharray="7 5"
             class="animate-water-stream"
           />
 
           <!-- Center to Bottom-Right (Dashboard) -->
           <line
-            x1="450"
-            y1="240"
-            x2="620"
-            y2="340"
+            x1="470"
+            y1="250"
+            x2="660"
+            y2="375"
             stroke="url(#lineGrad)"
-            stroke-width="3"
-            stroke-dasharray="8 6"
+            stroke-width="2.5"
+            stroke-dasharray="7 5"
             class="animate-water-stream"
           />
         </svg>
 
         <!-- Nodes Layout: 2 Columns on Mobile, 3 on Desktop -->
-        <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 items-center">
+        <div class="relative z-10 w-full grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12 items-center">
           <!-- Left Column Nodes -->
-          <div class="flex flex-col gap-6 md:gap-14">
+          <div class="flex flex-col justify-between gap-8 md:gap-16 lg:gap-20">
             <!-- Node: KIRISH -> Buyurtma (shadcn Card) -->
             <Card
               @mouseenter="activeNode = 'buyurtma'"
               :class="[
-                'p-5 sm:p-6 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-md rounded-2xl',
+                'p-4.5 sm:p-5 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-sm rounded-2xl',
                 activeNode === 'buyurtma' ? 'border-sky-500 ring-2 ring-sky-100 scale-102 bg-white' : 'border-slate-200 bg-white hover:border-sky-300'
               ]"
             >
-              <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
+              <div class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
                 <PhoneCall class="w-5 h-5" />
               </div>
               <div>
-                <span class="text-xs font-bold tracking-wider text-slate-400 uppercase block">KIRISH</span>
+                <span class="text-[11px] font-bold tracking-wider text-slate-400 uppercase block">KIRISH</span>
                 <h4 class="text-base sm:text-lg font-bold text-slate-900">Buyurtma</h4>
               </div>
             </Card>
@@ -144,15 +144,15 @@ const getFeatureIcon = (name: string) => {
             <Card
               @mouseenter="activeNode = 'ferma'"
               :class="[
-                'p-5 sm:p-6 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-md rounded-2xl',
+                'p-4.5 sm:p-5 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-sm rounded-2xl',
                 activeNode === 'ferma' ? 'border-sky-500 ring-2 ring-sky-100 scale-102 bg-white' : 'border-slate-200 bg-white hover:border-sky-300'
               ]"
             >
-              <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
+              <div class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
                 <Warehouse class="w-5 h-5" />
               </div>
               <div>
-                <span class="text-xs font-bold tracking-wider text-slate-400 uppercase block">MANBA</span>
+                <span class="text-[11px] font-bold tracking-wider text-slate-400 uppercase block">MANBA</span>
                 <h4 class="text-base sm:text-lg font-bold text-slate-900">Ferma / Ombor</h4>
               </div>
             </Card>
@@ -161,19 +161,19 @@ const getFeatureIcon = (name: string) => {
           <!-- Central Core Node: GidroGo Engine -->
           <div class="flex flex-col items-center justify-center my-4 md:my-0">
             <div class="relative flex items-center justify-center">
-              <div class="absolute w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-sky-200/40 animate-ping opacity-25"></div>
-              <div class="absolute w-32 h-32 sm:w-40 sm:h-40 rounded-3xl bg-sky-100/60"></div>
+              <div class="absolute w-32 h-32 sm:w-36 sm:h-36 rounded-2xl bg-sky-200/40 animate-ping opacity-25"></div>
+              <div class="absolute w-28 h-28 sm:w-32 sm:h-32 rounded-2xl bg-sky-100/60"></div>
 
               <div
-                class="relative w-28 h-28 sm:w-34 sm:h-34 rounded-3xl bg-white p-3 shadow-2xl shadow-sky-500/30 border border-sky-100 flex items-center justify-center hover:scale-105 transition-all duration-300"
+                class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-white p-3 shadow-xl shadow-sky-500/20 border-2 border-sky-100 flex items-center justify-center hover:scale-105 transition-all duration-300"
               >
                 <picture class="w-full h-full flex items-center justify-center">
                   <source :srcset="logoWebp" type="image/webp" />
                   <img
                     :src="logoPng"
                     alt="GidroGo Engine"
-                    width="128"
-                    height="85"
+                    width="100"
+                    height="70"
                     loading="lazy"
                     decoding="async"
                     class="w-full h-full object-contain filter drop-shadow"
@@ -183,26 +183,26 @@ const getFeatureIcon = (name: string) => {
             </div>
 
             <div class="text-center mt-4">
-              <h3 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">GidroGo</h3>
+              <h3 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">GidroGo</h3>
               <span class="text-[11px] font-extrabold tracking-widest text-sky-600 uppercase">AUTOMATION ENGINE</span>
             </div>
           </div>
 
           <!-- Right Column Nodes -->
-          <div class="flex flex-col gap-6 md:gap-14">
+          <div class="flex flex-col justify-between gap-8 md:gap-16 lg:gap-20">
             <!-- Node: NATIJA -> Dastavkachi (shadcn Card) -->
             <Card
               @mouseenter="activeNode = 'dastavkachi'"
               :class="[
-                'p-5 sm:p-6 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-md rounded-2xl',
+                'p-4.5 sm:p-5 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-sm rounded-2xl',
                 activeNode === 'dastavkachi' ? 'border-sky-500 ring-2 ring-sky-100 scale-102 bg-white' : 'border-slate-200 bg-white hover:border-sky-300'
               ]"
             >
-              <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
+              <div class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
                 <Truck class="w-5 h-5" />
               </div>
               <div>
-                <span class="text-xs font-bold tracking-wider text-slate-400 uppercase block">NATIJA</span>
+                <span class="text-[11px] font-bold tracking-wider text-slate-400 uppercase block">NATIJA</span>
                 <h4 class="text-base sm:text-lg font-bold text-slate-900">Dastavkachi</h4>
               </div>
             </Card>
@@ -211,15 +211,15 @@ const getFeatureIcon = (name: string) => {
             <Card
               @mouseenter="activeNode = 'dashboard'"
               :class="[
-                'p-5 sm:p-6 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-md rounded-2xl',
+                'p-4.5 sm:p-5 flex items-center gap-4 transition-all duration-300 cursor-pointer shadow-sm rounded-2xl',
                 activeNode === 'dashboard' ? 'border-sky-500 ring-2 ring-sky-100 scale-102 bg-white' : 'border-slate-200 bg-white hover:border-sky-300'
               ]"
             >
-              <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
+              <div class="w-11 h-11 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0">
                 <BarChart3 class="w-5 h-5" />
               </div>
               <div>
-                <span class="text-xs font-bold tracking-wider text-slate-400 uppercase block">TAHLIL</span>
+                <span class="text-[11px] font-bold tracking-wider text-slate-400 uppercase block">TAHLIL</span>
                 <h4 class="text-base sm:text-lg font-bold text-slate-900">Dashboard</h4>
               </div>
             </Card>

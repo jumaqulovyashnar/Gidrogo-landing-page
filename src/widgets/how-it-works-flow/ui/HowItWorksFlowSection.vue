@@ -38,7 +38,7 @@ const steps = [
     number: '04',
     title: 'Suv yetkaziladi',
     description: 'Kuryer optimal tirbandliksiz marshrut bo‘yicha toza ichimlik suvini mijoz eshigigacha tezkor yetkazib beradi.',
-    tag: 'Jonli yetkazuv',
+    tag: 'Tezkor yetkazuv',
     icon: Truck,
   },
   {

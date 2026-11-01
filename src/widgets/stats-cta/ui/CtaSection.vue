@@ -46,57 +46,57 @@ const handleFormSubmit = async () => {
 <template>
   <section id="contact" class="py-20 md:py-28 bg-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Premium Enclosed CTA & Contact Card -->
+      <!-- Premium Enclosed Light CTA & Contact Card (Unified Consistent Light Theme) -->
       <div
-        class="relative rounded-[2.5rem] bg-gradient-to-br from-[#071a35] via-[#0a2347] to-[#041226] border border-sky-500/25 p-8 sm:p-12 lg:p-16 shadow-2xl overflow-hidden text-white"
+        class="relative rounded-[2.5rem] bg-gradient-to-br from-slate-50 via-sky-50/40 to-slate-50 border-2 border-slate-200/90 p-8 sm:p-12 lg:p-16 shadow-xl shadow-sky-950/5 overflow-hidden text-slate-900"
       >
-        <!-- Subtle Ambient Background Light (No weird 3D bubbles) -->
-        <div class="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+        <!-- Subtle Ambient Background Grid (Matches overall light theme) -->
+        <div class="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none rounded-[2.5rem]"></div>
         <div
-          class="absolute -top-32 -left-32 w-96 h-96 rounded-3xl bg-sky-500/15 blur-3xl pointer-events-none"
+          class="absolute -top-32 -left-32 w-96 h-96 rounded-3xl bg-sky-200/30 blur-3xl pointer-events-none"
         ></div>
         <div
-          class="absolute -bottom-32 -right-32 w-96 h-96 rounded-3xl bg-cyan-400/15 blur-3xl pointer-events-none"
+          class="absolute -bottom-32 -right-32 w-96 h-96 rounded-3xl bg-cyan-200/30 blur-3xl pointer-events-none"
         ></div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
-          <!-- Left Side Copy -->
+          <!-- Left Side Copy (Clean, High-Contrast Typography) -->
           <div class="lg:col-span-6 space-y-6">
             <!-- Eyebrow Pill -->
             <div
-              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs font-bold tracking-wide"
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-sky-100/80 border border-sky-200 text-sky-700 text-xs font-bold tracking-wide"
             >
-              <Sparkles class="w-3.5 h-3.5 text-sky-400" />
+              <Sparkles class="w-3.5 h-3.5 text-sky-600" />
               <span>Bepul konsultatsiya va tizim namoyishi</span>
             </div>
 
-            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15]">
               Biznesingizni bugunoq <br class="hidden sm:inline" />
-              <span class="bg-gradient-to-r from-sky-400 via-cyan-300 to-sky-300 bg-clip-text text-transparent">
+              <span class="bg-gradient-to-r from-sky-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent">
                 raqamlashtiring.
               </span>
             </h2>
 
-            <p class="text-base sm:text-lg text-slate-300 max-w-lg leading-relaxed">
+            <p class="text-base sm:text-lg text-slate-600 max-w-lg leading-relaxed">
               GidroGo bilan suv yetkazib berish biznesingizni yagona tizim orqali boshqaring. 15 daqiqada ulaning va barcha jarayonlarni to‘liq nazoratga oling.
             </p>
 
             <!-- 3 Feature Checkpoints -->
-            <div class="space-y-3 pt-2 text-sm font-semibold text-slate-200">
+            <div class="space-y-3 pt-2 text-sm font-semibold text-slate-700">
               <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-lg bg-emerald-500/20 border border-emerald-400/40 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                <div class="w-6 h-6 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center flex-shrink-0">
                   <Check class="w-3.5 h-3.5 stroke-[3]" />
                 </div>
                 <span>Bepul o‘rnatish va korxonangizga moslash</span>
               </div>
               <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-lg bg-emerald-500/20 border border-emerald-400/40 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                <div class="w-6 h-6 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center flex-shrink-0">
                   <Check class="w-3.5 h-3.5 stroke-[3]" />
                 </div>
                 <span>Biznesingizga mos tahlil va ko‘rsatkichlar</span>
               </div>
               <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-lg bg-emerald-500/20 border border-emerald-400/40 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                <div class="w-6 h-6 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center flex-shrink-0">
                   <Check class="w-3.5 h-3.5 stroke-[3]" />
                 </div>
                 <span>Hech qanday majburiyatsiz sinab ko‘rish</span>
@@ -104,21 +104,21 @@ const handleFormSubmit = async () => {
             </div>
 
             <!-- Quick Direct Contact Pill -->
-            <div class="pt-4 flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-300">
+            <div class="pt-4 flex flex-wrap items-center gap-4 text-xs font-semibold text-slate-700">
               <a
                 href="tel:+998941782402"
-                class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white transition-colors"
+                class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 shadow-2xs transition-colors"
               >
-                <Phone class="w-3.5 h-3.5 text-sky-400" />
+                <Phone class="w-3.5 h-3.5 text-sky-600" />
                 <span>+998 (94) 178-24-02</span>
               </a>
               <a
                 href="https://t.me/gidrogo_admin"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white transition-colors"
+                class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 shadow-2xs transition-colors"
               >
-                <Send class="w-3.5 h-3.5 text-sky-400" />
+                <Send class="w-3.5 h-3.5 text-sky-600" />
                 <span>@gidrogo_admin</span>
               </a>
             </div>
@@ -127,11 +127,11 @@ const handleFormSubmit = async () => {
           <!-- Right Side: Contact Form Card -->
           <div class="lg:col-span-6 w-full">
             <div
-              class="bg-white text-slate-900 rounded-3xl p-6 sm:p-9 shadow-2xl border border-slate-100"
+              class="bg-white text-slate-900 rounded-3xl p-6 sm:p-9 shadow-xl border border-slate-200/90"
             >
               <div v-if="!isSubmitted" class="space-y-4">
                 <div class="space-y-1 mb-2">
-                  <h3 class="text-xl font-black text-slate-900">Demoni bepul sinab ko‘ring</h3>
+                  <h3 class="text-xl font-black text-slate-900">Tizimni bepul sinab ko‘ring</h3>
                   <p class="text-xs sm:text-sm text-slate-500">Mutaxassisimiz siz bilan 15 daqiqada bog‘lanib, tizimni ko‘rsatib beradi.</p>
                 </div>
 

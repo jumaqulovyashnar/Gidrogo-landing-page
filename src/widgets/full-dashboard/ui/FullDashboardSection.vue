@@ -76,7 +76,7 @@ const recentDeliveries = [
           <!-- Status badge -->
           <div class="flex items-center gap-2 text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-lg border border-emerald-200/60">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span class="hidden sm:inline">Jonli tizim</span>
+            <span class="hidden sm:inline">Faol</span>
           </div>
         </div>
 
@@ -322,9 +322,9 @@ const recentDeliveries = [
               <div class="lg:col-span-4 bg-slate-50/70 border border-slate-200/80 rounded-2xl p-5 sm:p-6 flex flex-col justify-between">
                 <div class="space-y-3.5">
                   <div class="flex items-center justify-between pb-2 border-b border-slate-200/80">
-                    <h4 class="text-base font-bold text-slate-900">Jonli buyurtmalar</h4>
+                    <h4 class="text-base font-bold text-slate-900">Yangi buyurtmalar</h4>
                     <span class="text-xs text-emerald-600 font-bold flex items-center gap-1.5">
-                      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Jonli
+                      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Faol
                     </span>
                   </div>
 

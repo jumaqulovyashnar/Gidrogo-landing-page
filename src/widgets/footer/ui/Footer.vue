@@ -29,21 +29,6 @@ const scrollToSection = (id: string) => {
           <p class="text-sm text-slate-400 max-w-sm leading-relaxed">
             Suv yetkazib berish biznesi uchun yangi avlod boshqaruv tizimi. Barcha jarayonlar yagona tizimda.
           </p>
-
-          <!-- Telegram Quick Button -->
-          <div class="pt-2">
-            <a
-              href="https://t.me/gidrogo_admin"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-sky-500/15 hover:bg-sky-500/25 border border-sky-400/30 text-sky-400 hover:text-sky-300 transition-all duration-200 text-xs font-semibold group"
-            >
-              <svg class="w-4 h-4 fill-sky-400 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
-                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.196 1.006.128.832.941z"/>
-              </svg>
-              <span>Telegram orqali bog‘lanish</span>
-            </a>
-          </div>
         </div>
 
         <!-- Platforma column (lg:col-span-2) -->
@@ -102,31 +87,6 @@ const scrollToSection = (id: string) => {
               >
                 +998 (99) 571-31-13
               </a>
-            </li>
-
-            <!-- Telegram Link -->
-            <li>
-              <a
-                href="https://t.me/gidrogo_admin"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-2.5 text-slate-300 hover:text-sky-400 transition-colors font-medium group"
-              >
-                <div class="w-6 h-6 rounded-lg bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400 group-hover:bg-sky-500 group-hover:text-white transition-colors">
-                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.196 1.006.128.832.941z"/>
-                  </svg>
-                </div>
-                <span>Telegram: @gidrogo_admin</span>
-              </a>
-            </li>
-
-            <!-- Tizimga ulanish -->
-            <li class="pt-1">
-              <button @click="emit('open-demo')" class="text-sky-400 hover:text-sky-300 font-semibold transition-colors flex items-center gap-1.5">
-                <span>Tizimga ulanish</span>
-                <span>→</span>
-              </button>
             </li>
           </ul>
         </div>
