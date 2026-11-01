@@ -20,14 +20,14 @@ const scrollToHowItWorks = () => {
       class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] rounded-full bg-gradient-to-tr from-sky-200/40 via-cyan-200/30 to-transparent blur-3xl pointer-events-none"
     ></div>
 
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center mb-10 md:mb-14">
-      <div class="space-y-6 max-w-4xl mx-auto">
-        <!-- Main Title (Strict 2 Lines) -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center mb-10 md:mb-14">
+      <div class="space-y-6 max-w-5xl mx-auto">
+        <!-- Main Title (Strictly Guaranteed 2 Lines) -->
         <h1
-          class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.18]"
+          class="text-3xl sm:text-4xl md:text-[2.75rem] lg:text-[3.25rem] xl:text-[3.75rem] font-black text-slate-900 tracking-tight leading-[1.15]"
         >
-          <span class="block">Suv yetkazib berish biznesingizni</span>
-          <span class="block mt-1 sm:mt-2">
+          <span class="block sm:whitespace-nowrap">Suv yetkazib berish biznesingizni</span>
+          <span class="block sm:whitespace-nowrap mt-1 sm:mt-2">
             <span class="bg-gradient-to-r from-sky-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent">yagona tizimda</span> boshqaring.
           </span>
         </h1>
