@@ -43,7 +43,7 @@ const mapFeatures = computed(() => [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="max-w-3xl mx-auto text-center space-y-4 mb-14 md:mb-16">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.3] sm:leading-[1.35]">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-snug sm:leading-snug md:leading-[1.4]">
           {{ t('liveMap.title') }}
         </h2>
         <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
@@ -65,10 +65,10 @@ const mapFeatures = computed(() => [
                 : 'bg-white border-slate-200/90 hover:border-sky-300 hover:shadow-card-soft'
             ]"
           >
-            <!-- Normal shape icon (rounded-xl) -->
+            <!-- Circular shape icon (rounded-full) -->
             <div
               :class="[
-                'w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 border',
+                'w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 border',
                 activeFeature === index
                   ? 'bg-sky-600 text-white border-sky-600 shadow-md shadow-sky-600/25 scale-105'
                   : 'bg-sky-50 text-sky-600 border-sky-100 group-hover:bg-sky-100'

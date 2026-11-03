@@ -59,11 +59,11 @@ const steps = [
 </script>
 
 <template>
-  <section id="how-it-works-flow" class="py-20 md:py-28 bg-slate-50/60 relative overflow-hidden">
+  <section id="how-it-works" class="py-20 md:py-28 bg-slate-50/60 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Section Header -->
       <div class="max-w-3xl mx-auto text-center mb-16 md:mb-20 space-y-4">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.3] sm:leading-[1.35]">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-snug sm:leading-snug md:leading-[1.4]">
           GidroGo qanday ishlaydi?
         </h2>
         <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
@@ -82,7 +82,7 @@ const steps = [
             <!-- Top Bar: Icon & Step Number -->
             <div class="flex items-center justify-between mb-6">
               <div
-                class="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center group-hover:bg-gradient-to-tr group-hover:from-sky-600 group-hover:to-cyan-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm"
+                class="w-14 h-14 rounded-full bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center group-hover:bg-gradient-to-tr group-hover:from-sky-600 group-hover:to-cyan-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm"
               >
                 <component :is="step.icon" class="w-7 h-7 stroke-[2]" />
               </div>

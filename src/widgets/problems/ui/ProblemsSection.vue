@@ -35,8 +35,9 @@ const getIcon = (name: string) => {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="max-w-3xl mx-auto text-center mb-14 md:mb-18 space-y-4">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.3] sm:leading-[1.35]">
-          Suv yetkazib berish biznesini qo‘lda boshqarish qiyin.
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-snug sm:leading-snug md:leading-[1.4]">
+          Suv yetkazib berish biznesini <br class="hidden sm:inline" />
+          qo‘lda boshqarish qiyin.
         </h2>
         <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
           Tarqoq jarayonlar vaqtni oladi, xatolarni ko‘paytiradi va biznesning haqiqiy holatini yashiradi.
@@ -53,9 +54,9 @@ const getIcon = (name: string) => {
           <!-- Subtle Top Gradient Glow on Hover -->
           <div class="absolute -top-12 -right-12 w-32 h-32 rounded-full bg-sky-400/10 blur-2xl group-hover:bg-sky-400/25 transition-all duration-300 pointer-events-none"></div>
 
-          <!-- Icon box with normal shape (rounded-2xl) -->
+          <!-- Circular Icon box (rounded-full) -->
           <div
-            class="w-14 h-14 rounded-2xl bg-sky-50 border border-sky-100/90 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-gradient-to-tr group-hover:from-sky-600 group-hover:to-cyan-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm"
+            class="w-14 h-14 rounded-full bg-sky-50 border border-sky-100/90 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-gradient-to-tr group-hover:from-sky-600 group-hover:to-cyan-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm"
           >
             <component :is="getIcon(item.icon)" class="w-6 h-6 stroke-[2]" />
           </div>

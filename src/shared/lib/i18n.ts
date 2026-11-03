@@ -53,6 +53,11 @@ export const translations = {
     },
   },
   hero: {
+    badge: {
+      uz: 'Yangi avlod suv yetkazib berish tizimi',
+      ru: 'Система доставки воды нового поколения',
+      en: 'Next-gen water delivery platform',
+    },
     title1: {
       uz: 'Suv yetkazib berish biznesingizni',
       ru: 'Управляйте бизнесом доставки воды',
@@ -72,6 +77,16 @@ export const translations = {
       uz: 'Buyurtmalar, kuryerlar GPS marshruti, bo‘sh idishlar hisobi va onlayn to‘lovlar bir joyda. Shaffof nazorat va 2 baravar tezkor yetkazuv.',
       ru: 'Заказы, GPS маршруты курьеров, учет пустых бутылей и онлайн-платежи в одном месте. Прозрачный контроль и доставка в 2 раза быстрее.',
       en: 'Orders, courier GPS routes, empty bottle balance, and online payments in one place. Transparent control and 2x faster delivery.',
+    },
+    ctaContact: {
+      uz: 'Ariza qoldirish',
+      ru: 'Оставить заявку',
+      en: 'Get in touch',
+    },
+    ctaFeatures: {
+      uz: 'Imkoniyatlar',
+      ru: 'Возможности',
+      en: 'Features',
     },
     loginBtn: {
       uz: 'Kirish',
@@ -236,6 +251,38 @@ export const translations = {
       uz: 'Yana ariza yuborish',
       ru: 'Отправить еще заявку',
       en: 'Send another request',
+    },
+  },
+  footer: {
+    tagline: {
+      uz: 'Suv yetkazib berish biznesi uchun yangi avlod boshqaruv tizimi. Barcha jarayonlar yagona tizimda.',
+      ru: 'Система нового поколения для бизнеса доставки воды. Все процессы в единой платформе.',
+      en: 'Next-generation management system for water delivery businesses. All processes in one place.',
+    },
+    sections: {
+      uz: 'Bo‘limlar',
+      ru: 'Разделы',
+      en: 'Navigation',
+    },
+    contact: {
+      uz: 'Aloqa',
+      ru: 'Контакты',
+      en: 'Contact',
+    },
+    supportHours: {
+      uz: 'Har kuni 09:00 dan 20:00 gacha',
+      ru: 'Ежедневно с 09:00 до 20:00',
+      en: 'Daily 09:00 – 20:00',
+    },
+    rights: {
+      uz: '© 2026 GidroGo. Barcha huquqlar himoyalangan.',
+      ru: '© 2026 GidroGo. Все права защищены.',
+      en: '© 2026 GidroGo. All rights reserved.',
+    },
+    backToTop: {
+      uz: 'Yuqoriga',
+      ru: 'Наверх',
+      en: 'Back to top',
     },
   },
 }
