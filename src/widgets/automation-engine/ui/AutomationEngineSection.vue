@@ -59,9 +59,9 @@ const getFeatureIcon = (name: string) => {
           <div>
             <!-- Circular shape icon (rounded-full) -->
             <div
-              class="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center mb-5 group-hover:bg-gradient-to-tr group-hover:from-sky-600 group-hover:to-cyan-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-sm"
+              class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center mb-4 sm:mb-5 flex-shrink-0 group-hover:bg-gradient-to-tr group-hover:from-sky-600 group-hover:to-cyan-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-2xs"
             >
-              <component :is="getFeatureIcon(item.icon)" class="w-6 h-6 stroke-[2]" />
+              <component :is="getFeatureIcon(item.icon)" class="w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" />
             </div>
 
             <!-- Standardized Font Sizes: Title & Description -->

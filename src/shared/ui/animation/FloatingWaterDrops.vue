@@ -51,7 +51,7 @@
 
     <!-- Droplet 6: Medium drop on right-bottom -->
     <div
-      class="absolute right-8 sm:right-28 top-[85%] w-11 h-13 rounded-full bg-gradient-to-bl from-white/90 via-sky-200/60 to-cyan-500/35 backdrop-blur-md shadow-[0_10px_24px_rgba(2,132,199,0.22)] border border-white/60 animate-droplet-right"
+      class="absolute right-8 sm:right-28 top-[85%] w-10 h-12 rounded-full bg-gradient-to-bl from-white/90 via-sky-200/60 to-cyan-500/35 backdrop-blur-md shadow-[0_10px_24px_rgba(2,132,199,0.22)] border border-white/60 animate-droplet-right"
       style="animation-duration: 12s; animation-delay: 2s;"
     >
       <div class="absolute top-2 right-2.5 w-3 h-1.5 rounded-full bg-white/90 rotate-[30deg]"></div>
