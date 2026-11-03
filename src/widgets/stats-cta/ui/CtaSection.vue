@@ -114,16 +114,21 @@ const handleFormSubmit = async () => {
 
   isLoading.value = true
   try {
-    await sendDemoEmail({
+    const success = await sendDemoEmail({
       name: trimmedName,
       phone: trimmedPhone,
       message: form.value.message.trim(),
     })
+    if (success) {
+      isSubmitted.value = true
+    } else {
+      errorMessage.value = "Xatolik: Email yuborilmadi. EmailJS Template ID noto'g'ri ko'rsatilgan bo'lishi mumkin."
+    }
   } catch (error) {
     console.error('Submission error:', error)
+    errorMessage.value = "Xatolik yuz berdi. Iltimos, qaytadan urinib ko'ring."
   } finally {
     isLoading.value = false
-    isSubmitted.value = true
   }
 }
 </script>

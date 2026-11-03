@@ -27,9 +27,10 @@ export async function sendDemoEmail(data: EmailParams): Promise<boolean> {
     }
 
     const response = await emailjs.send(serviceId, templateId, templateParams, publicKey)
+    console.log('EmailJS response:', response)
     return response.status === 200
-  } catch (error) {
-    console.error('EmailJS error:', error)
+  } catch (error: any) {
+    console.error('EmailJS error details:', error?.text || error?.message || error)
     return false
   }
 }
