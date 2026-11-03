@@ -173,9 +173,9 @@ export const translations = {
       en: 'today.',
     },
     subtitle: {
-      uz: 'GidroGo bilan suv yetkazib berish biznesingizni yagona tizim orqali boshqaring. 15 daqiqada ulaning va barcha jarayonlarni to‘liq nazoratga oling.',
-      ru: 'Управляйте бизнесом доставки воды через единую систему GidroGo. Подключение за 15 минут и полный контроль процессов.',
-      en: 'Run your water delivery business through a single platform with GidroGo. Connect in 15 minutes and gain full process control.',
+      uz: 'Tizimni korxonangizga joriy qilish, bepul demo olish yoki barcha savollaringiz bo‘yicha mutaxassislarimiz bilan bog‘laning.',
+      ru: 'Свяжитесь с нами для внедрения системы, получения бесплатного демо или по любым интересующим вопросам.',
+      en: 'Contact our specialists to implement the system, get a free demo, or answer any questions.',
     },
     check1: {
       uz: 'Bepul o‘rnatish va korxonangizga moslash',

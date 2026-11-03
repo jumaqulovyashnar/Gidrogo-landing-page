@@ -2,7 +2,7 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import GidroGoLogo from '@/shared/ui/icon/GidroGoLogo.vue'
 import FlagIcon from '@/shared/ui/icon/FlagIcon.vue'
-import { Menu, X, ArrowRight, ChevronDown, Check } from 'lucide-vue-next'
+import { Menu, X, ChevronDown, Check } from 'lucide-vue-next'
 import { useI18n, type Language } from '@/shared/lib/i18n'
 
 const { t, currentLanguage, setLanguage, languages } = useI18n()
@@ -142,10 +142,9 @@ const scrollTo = (href: string) => {
         <!-- Kirish Button -->
         <a
           href="https://gidrogo-project.vercel.app/login"
-          class="rounded-xl px-5 py-2.5 text-sm font-bold shadow-md shadow-sky-600/20 bg-sky-600 hover:bg-sky-500 text-white flex items-center gap-2 group transition-all"
+          class="rounded-xl px-5 py-2.5 text-sm font-bold shadow-md shadow-sky-600/20 bg-sky-600 hover:bg-sky-500 text-white flex items-center justify-center transition-all"
         >
           <span>{{ t('nav.login') }}</span>
-          <ArrowRight class="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </a>
       </div>
 
@@ -201,10 +200,9 @@ const scrollTo = (href: string) => {
         <a
           href="https://gidrogo-project.vercel.app/login"
           @click="isMobileMenuOpen = false"
-          class="w-full rounded-xl py-3 text-sm font-bold shadow-md shadow-sky-600/20 bg-sky-600 hover:bg-sky-500 text-white flex items-center justify-center gap-2"
+          class="w-full rounded-xl py-3 text-sm font-bold shadow-md shadow-sky-600/20 bg-sky-600 hover:bg-sky-500 text-white flex items-center justify-center"
         >
           <span>{{ t('nav.login') }}</span>
-          <ArrowRight class="w-4 h-4" />
         </a>
       </div>
     </div>
