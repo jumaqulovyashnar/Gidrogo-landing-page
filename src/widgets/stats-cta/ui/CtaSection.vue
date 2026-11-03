@@ -7,7 +7,6 @@ import {
   User,
   Phone,
   MessageSquare,
-  Send,
   Loader2,
 } from 'lucide-vue-next'
 import { Button } from '@/shared/ui/button'
@@ -67,26 +66,6 @@ const handleFormSubmit = async () => {
           <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-lg">
             {{ t('contact.subtitle') }}
           </p>
-
-          <!-- Direct Quick Contacts -->
-          <div class="pt-2 flex flex-wrap items-center gap-3 text-sm font-semibold text-slate-700">
-            <a
-              href="tel:+998941782402"
-              class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white hover:bg-sky-50 border border-slate-200 text-slate-800 hover:text-sky-700 shadow-xs transition-all hover:-translate-y-0.5"
-            >
-              <Phone class="w-4 h-4 text-sky-600" />
-              <span>+998 (94) 178-24-02</span>
-            </a>
-            <a
-              href="https://t.me/gidrogo_admin"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white hover:bg-sky-50 border border-slate-200 text-slate-800 hover:text-sky-700 shadow-xs transition-all hover:-translate-y-0.5"
-            >
-              <Send class="w-4 h-4 text-sky-600" />
-              <span>@gidrogo_admin</span>
-            </a>
-          </div>
         </div>
 
         <!-- Right Side: Bordered Card for Form -->
