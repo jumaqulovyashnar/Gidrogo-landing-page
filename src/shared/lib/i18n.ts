@@ -173,9 +173,39 @@ export const translations = {
       en: 'today.',
     },
     subtitle: {
-      uz: 'Tizimni korxonangizga joriy qilish, bepul demo olish yoki barcha savollaringiz bo‘yicha mutaxassislarimiz bilan bog‘laning.',
-      ru: 'Свяжитесь с нами для внедрения системы, получения бесплатного демо или по любым интересующим вопросам.',
-      en: 'Contact our specialists to implement the system, get a free demo, or answer any questions.',
+      uz: 'GidroGo tizimi orqali buyurtma qabul qilishdan tortib, kuryerlar yetkazib berishigacha bo‘lgan barcha jarayonlarni to‘liq avtomatlashtiring.',
+      ru: 'Автоматизируйте все процессы от приема заказов до доставки курьерами с единой системой GidroGo.',
+      en: 'Automate all operations from order intake to doorstep delivery with the all-in-one GidroGo platform.',
+    },
+    benefit1Title: {
+      uz: 'Tezkor o‘rnatish va moslash',
+      ru: 'Быстрое внедрение и настройка',
+      en: 'Fast setup & onboarding',
+    },
+    benefit1Desc: {
+      uz: 'Tizimni korxonangizga sozlab, jamoangizni bepul o‘qitib beramiz.',
+      ru: 'Настроим систему под ваш бизнес и бесплатно обучим команду.',
+      en: 'We tailor the platform to your workflow and train your team for free.',
+    },
+    benefit2Title: {
+      uz: 'To‘liq nazorat va shaffoflik',
+      ru: 'Полный контроль и прозрачность',
+      en: 'Total control & transparency',
+    },
+    benefit2Desc: {
+      uz: 'Kuryerlar marshruti, bo‘sh idishlar balansi va moliya doimiy nazoratda.',
+      ru: 'Маршруты курьеров, баланс тары и касса под постоянным контролем.',
+      en: 'Real-time courier routes, empty bottle balance, and revenue tracking.',
+    },
+    benefit3Title: {
+      uz: '24/7 texnik ko‘mak',
+      ru: 'Техническая поддержка 24/7',
+      en: '24/7 technical support',
+    },
+    benefit3Desc: {
+      uz: 'Istalgan savol yoki vaziyatda mutaxassislarimiz doimo yordamga tayyor.',
+      ru: 'Наши специалисты всегда на связи и готовы помочь в любой ситуации.',
+      en: 'Our specialists are always ready to assist with any questions or issues.',
     },
     check1: {
       uz: 'Bepul o‘rnatish va korxonangizga moslash',

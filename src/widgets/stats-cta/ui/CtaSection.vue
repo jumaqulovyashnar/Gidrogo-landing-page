@@ -8,6 +8,9 @@ import {
   Phone,
   MessageSquare,
   Loader2,
+  Zap,
+  BarChart3,
+  Headphones,
 } from 'lucide-vue-next'
 import { Button } from '@/shared/ui/button'
 import { sendDemoEmail } from '@/shared/lib/email'
@@ -55,17 +58,65 @@ const handleFormSubmit = async () => {
 <template>
   <section id="contact" class="py-20 md:py-28 bg-slate-50/70 border-t border-slate-200/60 relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        <!-- Left Side: Clean Copy & Contacts -->
-        <div class="lg:col-span-6 space-y-6">
-          <h2 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-black text-slate-900 tracking-tight leading-[1.2]">
-            <span>{{ t('contact.title1') }}</span>
-            <span class="text-sky-600 block mt-1">{{ t('contact.titleHighlight') }}</span>
-          </h2>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+        <!-- Left Side: Balanced Copy & Benefits (Matching Card Height) -->
+        <div class="lg:col-span-6 flex flex-col justify-between py-2">
+          <!-- Top: Title & Subtitle -->
+          <div class="space-y-4">
+            <h2 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-black text-slate-900 tracking-tight leading-[1.2]">
+              <span>{{ t('contact.title1') }}</span>
+              <span class="text-sky-600 block mt-1">{{ t('contact.titleHighlight') }}</span>
+            </h2>
 
-          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-lg">
-            {{ t('contact.subtitle') }}
-          </p>
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-lg">
+              {{ t('contact.subtitle') }}
+            </p>
+          </div>
+
+          <!-- Middle: 3 Clean Benefit Points -->
+          <div class="space-y-5 my-6 sm:my-8">
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0 shadow-2xs mt-0.5">
+                <Zap class="w-5 h-5 text-sky-600" />
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-slate-900">{{ t('contact.benefit1Title') }}</h4>
+                <p class="text-sm text-slate-500 leading-relaxed mt-0.5">{{ t('contact.benefit1Desc') }}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0 shadow-2xs mt-0.5">
+                <BarChart3 class="w-5 h-5 text-sky-600" />
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-slate-900">{{ t('contact.benefit2Title') }}</h4>
+                <p class="text-sm text-slate-500 leading-relaxed mt-0.5">{{ t('contact.benefit2Desc') }}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0 shadow-2xs mt-0.5">
+                <Headphones class="w-5 h-5 text-sky-600" />
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-slate-900">{{ t('contact.benefit3Title') }}</h4>
+                <p class="text-sm text-slate-500 leading-relaxed mt-0.5">{{ t('contact.benefit3Desc') }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Trust Indicators -->
+          <div class="pt-4 border-t border-slate-200/80 flex flex-wrap items-center gap-6 text-xs font-semibold text-slate-500">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+              <span>15 daqiqada ulanish</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-sky-500"></div>
+              <span>Bepul demo & o‘qitish</span>
+            </div>
+          </div>
         </div>
 
         <!-- Right Side: Bordered Card for Form -->
