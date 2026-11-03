@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import {
   Warehouse,
   MapPin,
@@ -10,29 +10,32 @@ import {
   Sparkles,
 } from 'lucide-vue-next'
 import { Card } from '@/shared/ui/card'
+import { useI18n } from '@/shared/lib/i18n'
+
+const { t } = useI18n()
 
 const activeFeature = ref(0)
 
-const mapFeatures = [
+const mapFeatures = computed(() => [
   {
     id: 0,
-    title: 'Mos dastavkachini aniqlash',
-    description: 'Eng yaqin va zaxirasida yetarli suv bo‘lgan kuryerga buyurtma avtomatik uzatiladi.',
+    title: t('liveMap.feature1Title'),
+    description: t('liveMap.feature1Desc'),
     icon: Sparkles,
   },
   {
     id: 1,
-    title: 'Yo‘nalish va holat monitoringi',
-    description: 'Kuryer harakati, tirbandliklar va qolgan vaqt xaritada real vaqtda aniq ko‘rinadi.',
+    title: t('liveMap.feature2Title'),
+    description: t('liveMap.feature2Desc'),
     icon: Navigation,
   },
   {
     id: 2,
-    title: 'Bo‘sh idishlar balansi',
-    description: 'Har bir topshirishda bo‘sh baklar darhol ro‘yxatga olinadi va hisobga o‘tadi.',
+    title: t('liveMap.feature3Title'),
+    description: t('liveMap.feature3Desc'),
     icon: RefreshCw,
   },
-]
+])
 </script>
 
 <template>
@@ -40,11 +43,11 @@ const mapFeatures = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="max-w-3xl mx-auto text-center space-y-4 mb-14 md:mb-16">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.15]">
-          Har bir buyurtma — xaritada, nazorat ostida.
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.3] sm:leading-[1.35]">
+          {{ t('liveMap.title') }}
         </h2>
         <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-          Ferma, dastavkachi va mijoz bitta oqimda. Buyurtma holati real vaqtda ko‘rinadi.
+          {{ t('liveMap.subtitle') }}
         </p>
       </div>
 

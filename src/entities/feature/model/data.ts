@@ -59,7 +59,7 @@ export const featuresList: FeatureItem[] = [
   {
     id: 'f7',
     title: 'Moliyaviy hisobot va kassa',
-    description: 'Har kungi sof daromad, kuryerlar xizmat haqi, benzin xarajatlari va qarzlar bo‘yicha avtomatik buxgalteriya hisoboti.',
+    description: 'Har kungi sof daromad, kuryerlar xizmat haqi va qarzlar bo‘yicha avtomatik buxgalteriya hisoboti.',
     tag: 'Boshqaruv hisoboti',
     icon: 'BarChart3',
     highlight: 'Bir bosishda hisobot',

@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import { ArrowRight, ChevronDown } from 'lucide-vue-next'
 import { Button } from '@/shared/ui/button'
-import FlowingWaterWave from '@/shared/ui/animation/FlowingWaterWave.vue'
+import { useI18n } from '@/shared/lib/i18n'
 
-const emit = defineEmits<{
-  (e: 'open-demo'): void
-}>()
+const { t } = useI18n()
 
 const scrollToHowItWorks = () => {
   const el = document.querySelector('#how-it-works')
@@ -22,39 +20,38 @@ const scrollToHowItWorks = () => {
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center mb-10 md:mb-14">
       <div class="space-y-6 max-w-5xl mx-auto">
-        <!-- Main Title (Strictly Guaranteed 2 Lines) -->
+        <!-- Main Title (Strictly 2 Lines with Generous Leading) -->
         <h1
-          class="text-3xl sm:text-4xl md:text-[2.75rem] lg:text-[3.25rem] xl:text-[3.75rem] font-black text-slate-900 tracking-tight leading-[1.15]"
+          class="text-3xl sm:text-4xl md:text-[2.75rem] lg:text-[3.25rem] xl:text-[3.75rem] font-black text-slate-900 tracking-tight leading-[1.3] sm:leading-[1.35]"
         >
-          <span class="block sm:whitespace-nowrap">Suv yetkazib berish biznesingizni</span>
-          <span class="block sm:whitespace-nowrap mt-1 sm:mt-2">
-            <span class="bg-gradient-to-r from-sky-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent">yagona tizimda</span> boshqaring.
+          <span class="block sm:whitespace-nowrap">{{ t('hero.title1') }}</span>
+          <span class="block sm:whitespace-nowrap mt-2 sm:mt-3">
+            <span class="bg-gradient-to-r from-sky-600 via-sky-500 to-cyan-500 bg-clip-text text-transparent">{{ t('hero.titleHighlight') }}</span> {{ t('hero.title2') }}
           </span>
         </h1>
 
-        <!-- Concise Meaningful Subtitle -->
-        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-          Buyurtmalar, kuryerlar GPS marshruti, bo‘sh idishlar hisobi va onlayn to‘lovlar bir joyda. Shaffof nazorat va 2 baravar tezkor yetkazuv.
+        <!-- Concise Meaningful Subtitle with proper leading -->
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto pt-2">
+          {{ t('hero.subtitle') }}
         </p>
 
-        <!-- Action Buttons -->
+        <!-- Action Buttons: Kirish + Qanday ishlaydi -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-          <Button
-            @click="emit('open-demo')"
-            size="lg"
-            class="w-full sm:w-auto rounded-xl px-8 py-3.5 text-base font-bold shadow-xl shadow-sky-600/25 group flex items-center justify-center gap-2"
+          <a
+            href="https://gidrogo-project.vercel.app/login"
+            class="w-full sm:w-auto rounded-xl px-8 py-3.5 text-base font-bold shadow-xl shadow-sky-600/25 bg-sky-600 hover:bg-sky-500 text-white flex items-center justify-center gap-2 transition-all group"
           >
-            <span>Bepul sinab ko‘rish</span>
+            <span>{{ t('hero.loginBtn') }}</span>
             <ArrowRight class="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Button>
+          </a>
 
           <Button
             @click="scrollToHowItWorks"
             variant="outline"
             size="lg"
-            class="w-full sm:w-auto rounded-xl px-8 py-3.5 text-base font-bold border-slate-200 text-slate-700 hover:border-sky-300 hover:bg-sky-50/50 flex items-center justify-center gap-2"
+            class="w-full sm:w-auto rounded-xl px-8 py-3.5 text-base font-bold border-slate-200 text-slate-700 hover:border-sky-300 hover:bg-sky-50/50 flex items-center justify-center gap-2 cursor-pointer"
           >
-            <span>Qanday ishlaydi</span>
+            <span>{{ t('hero.howItWorksBtn') }}</span>
             <ChevronDown class="w-4 h-4 text-slate-400 group-hover:translate-y-0.5 transition-transform" />
           </Button>
         </div>
@@ -63,23 +60,18 @@ const scrollToHowItWorks = () => {
         <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-6 max-w-2xl mx-auto">
           <div class="bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-4 shadow-sm">
             <span class="text-2xl sm:text-3xl font-black text-slate-900 block">100+</span>
-            <span class="text-[11px] sm:text-xs font-semibold text-slate-500">Faol suv korxonalari</span>
+            <span class="text-[11px] sm:text-xs font-semibold text-slate-500">{{ t('hero.stat1Label') }}</span>
           </div>
           <div class="bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-4 shadow-sm">
             <span class="text-2xl sm:text-3xl font-black text-sky-600 block">2x</span>
-            <span class="text-[11px] sm:text-xs font-semibold text-slate-500">Tezroq yetkazib berish</span>
+            <span class="text-[11px] sm:text-xs font-semibold text-slate-500">{{ t('hero.stat2Label') }}</span>
           </div>
           <div class="bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-2xl p-4 shadow-sm">
             <span class="text-2xl sm:text-3xl font-black text-emerald-600 block">45%</span>
-            <span class="text-[11px] sm:text-xs font-semibold text-slate-500">Xarajatlar tejalishi</span>
+            <span class="text-[11px] sm:text-xs font-semibold text-slate-500">{{ t('hero.stat3Label') }}</span>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Continuous Flowing Moving Water Wave at Bottom of Hero -->
-    <div class="relative w-full -mb-1">
-      <FlowingWaterWave />
     </div>
   </section>
 </template>

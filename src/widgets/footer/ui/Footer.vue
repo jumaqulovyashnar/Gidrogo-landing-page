@@ -2,10 +2,6 @@
 import GidroGoLogo from '@/shared/ui/icon/GidroGoLogo.vue'
 import { ArrowUp } from 'lucide-vue-next'
 
-const emit = defineEmits<{
-  (e: 'open-demo'): void
-}>()
-
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }

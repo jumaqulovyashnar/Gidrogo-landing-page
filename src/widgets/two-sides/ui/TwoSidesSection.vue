@@ -15,11 +15,10 @@ import { Card } from '@/shared/ui/card'
 <template>
   <section class="py-20 md:py-28 bg-slate-50/50 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <!-- Section Header (Strict 2 Lines) -->
-      <div class="max-w-3xl mx-auto text-center mb-12 md:mb-16 space-y-4">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.2]">
-          <span class="block">Biznes uchun nazorat.</span>
-          <span class="block text-sky-600 mt-1">Mijoz uchun qulaylik.</span>
+      <!-- Section Header (Single Clean Line) -->
+      <div class="max-w-4xl lg:max-w-5xl mx-auto text-center mb-12 md:mb-16 space-y-4">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black text-slate-900 tracking-tight leading-snug md:whitespace-nowrap">
+          Biznes uchun nazorat. <span class="text-sky-600">Mijoz uchun qulaylik.</span>
         </h2>
         <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
           Boshqaruv paneli orqali butun korxonani boshqaring yoki mijozlar uchun qulay buyurtma berish tizimini taqdim eting.

@@ -63,7 +63,7 @@ const steps = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Section Header -->
       <div class="max-w-3xl mx-auto text-center mb-16 md:mb-20 space-y-4">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.2]">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.3] sm:leading-[1.35]">
           GidroGo qanday ishlaydi?
         </h2>
         <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">

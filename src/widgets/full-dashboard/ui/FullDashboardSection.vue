@@ -44,7 +44,7 @@ const recentDeliveries = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="max-w-3xl mx-auto text-center space-y-4 mb-14 md:mb-18">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.2]">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.3] sm:leading-[1.35]">
           Biznesingizni raqamlar bilan boshqaring.
         </h2>
         <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
@@ -71,12 +71,6 @@ const recentDeliveries = [
           >
             <span class="text-emerald-500">🔒</span>
             <span>app.gidrogo.uz / dashboard</span>
-          </div>
-
-          <!-- Status badge -->
-          <div class="flex items-center gap-2 text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-lg border border-emerald-200/60">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span class="hidden sm:inline">Faol</span>
           </div>
         </div>
 
@@ -321,11 +315,8 @@ const recentDeliveries = [
               <!-- Right: Jonli yetkazib berish ro'yxati -->
               <div class="lg:col-span-4 bg-slate-50/70 border border-slate-200/80 rounded-2xl p-5 sm:p-6 flex flex-col justify-between">
                 <div class="space-y-3.5">
-                  <div class="flex items-center justify-between pb-2 border-b border-slate-200/80">
+                  <div class="pb-2 border-b border-slate-200/80">
                     <h4 class="text-base font-bold text-slate-900">Yangi buyurtmalar</h4>
-                    <span class="text-xs text-emerald-600 font-bold flex items-center gap-1.5">
-                      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Faol
-                    </span>
                   </div>
 
                   <div
