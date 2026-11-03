@@ -74,8 +74,8 @@ const handleFormSubmit = async () => {
           </div>
 
           <!-- Middle: 3 Clean Benefit Points -->
-          <div class="space-y-5 my-6 sm:my-8">
-            <div class="flex items-start gap-3.5">
+          <div class="space-y-6 my-auto pt-4">
+            <div class="flex items-start gap-4">
               <div class="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0 shadow-2xs mt-0.5">
                 <Zap class="w-5 h-5 text-sky-600" />
               </div>
@@ -85,7 +85,7 @@ const handleFormSubmit = async () => {
               </div>
             </div>
 
-            <div class="flex items-start gap-3.5">
+            <div class="flex items-start gap-4">
               <div class="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0 shadow-2xs mt-0.5">
                 <BarChart3 class="w-5 h-5 text-sky-600" />
               </div>
@@ -95,7 +95,7 @@ const handleFormSubmit = async () => {
               </div>
             </div>
 
-            <div class="flex items-start gap-3.5">
+            <div class="flex items-start gap-4">
               <div class="w-10 h-10 rounded-xl bg-sky-50 border border-sky-100 text-sky-600 flex items-center justify-center flex-shrink-0 shadow-2xs mt-0.5">
                 <Headphones class="w-5 h-5 text-sky-600" />
               </div>
@@ -103,18 +103,6 @@ const handleFormSubmit = async () => {
                 <h4 class="text-base font-bold text-slate-900">{{ t('contact.benefit3Title') }}</h4>
                 <p class="text-sm text-slate-500 leading-relaxed mt-0.5">{{ t('contact.benefit3Desc') }}</p>
               </div>
-            </div>
-          </div>
-
-          <!-- Bottom: Trust Indicators -->
-          <div class="pt-4 border-t border-slate-200/80 flex flex-wrap items-center gap-6 text-xs font-semibold text-slate-500">
-            <div class="flex items-center gap-2">
-              <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
-              <span>15 daqiqada ulanish</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <div class="w-2 h-2 rounded-full bg-sky-500"></div>
-              <span>Bepul demo & o‘qitish</span>
             </div>
           </div>
         </div>
