@@ -206,12 +206,9 @@ const handleFormSubmit = async () => {
               <!-- Name & Phone Fields -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div class="space-y-1.5">
-                  <label class="text-xs font-bold text-slate-700 flex items-center justify-between">
-                    <span class="flex items-center gap-1.5">
-                      <User class="w-3.5 h-3.5 text-sky-600" />
-                      <span>{{ t('contact.nameLabel') }}</span>
-                    </span>
-                    <span class="text-[10px] text-slate-400 font-normal">max 50</span>
+                  <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                    <User class="w-3.5 h-3.5 text-sky-600" />
+                    <span>{{ t('contact.nameLabel') }}</span>
                   </label>
                   <input
                     :value="form.name"
@@ -230,12 +227,9 @@ const handleFormSubmit = async () => {
                 </div>
 
                 <div class="space-y-1.5">
-                  <label class="text-xs font-bold text-slate-700 flex items-center justify-between">
-                    <span class="flex items-center gap-1.5">
-                      <Phone class="w-3.5 h-3.5 text-sky-600" />
-                      <span>{{ t('contact.phoneLabel') }}</span>
-                    </span>
-                    <span class="text-[10px] text-slate-400 font-normal">+998 (XX)</span>
+                  <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                    <Phone class="w-3.5 h-3.5 text-sky-600" />
+                    <span>{{ t('contact.phoneLabel') }}</span>
                   </label>
                   <input
                     :value="form.phone"
@@ -247,7 +241,7 @@ const handleFormSubmit = async () => {
                     maxlength="19"
                     placeholder="+998 (90) 123-45-67"
                     :class="[
-                      'w-full px-4 py-3 rounded-xl border text-sm focus:outline-none transition-all placeholder:text-slate-400 font-mono tracking-wide',
+                      'w-full px-4 py-3 rounded-xl border text-sm focus:outline-none transition-all placeholder:text-slate-400 tracking-wide',
                       phoneHasError
                         ? 'border-rose-400 bg-rose-50/40 text-rose-900 focus:ring-4 focus:ring-rose-100'
                         : 'border-slate-200 text-slate-900 bg-slate-50/50 focus:bg-white focus:border-sky-500 focus:ring-4 focus:ring-sky-100'
@@ -258,13 +252,10 @@ const handleFormSubmit = async () => {
 
               <!-- Textarea Field -->
               <div class="space-y-1.5">
-                <div class="flex items-center justify-between">
-                  <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                    <MessageSquare class="w-3.5 h-3.5 text-sky-600" />
-                    <span>{{ t('contact.messageLabel') }}</span>
-                  </label>
-                  <span class="text-[11px] text-slate-400">{{ form.message.length }}/500</span>
-                </div>
+                <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                  <MessageSquare class="w-3.5 h-3.5 text-sky-600" />
+                  <span>{{ t('contact.messageLabel') }}</span>
+                </label>
                 <textarea
                   v-model="form.message"
                   rows="4"
