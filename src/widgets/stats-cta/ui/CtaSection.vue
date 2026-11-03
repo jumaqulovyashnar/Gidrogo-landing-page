@@ -27,24 +27,97 @@ const form = ref({
 const isSubmitted = ref(false)
 const isLoading = ref(false)
 const errorMessage = ref('')
+const nameHasError = ref(false)
+const phoneHasError = ref(false)
+
+// Name Regex: Only letters (Latin, Cyrillic, Uzbek vowels/consonants), spaces, apostrophes (min 2, max 50)
+const NAME_REGEX = /^[a-zA-Zа-яА-ЯёЁўғқҳЎҒҚҲo'O'g'G'\s'’-]{2,50}$/
+
+// Phone Regex: Full Uzbek format with +998 (XX) XXX-XX-XX
+const PHONE_REGEX = /^\+998\s\([0-9]{2}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}$/
+
+const onNameInput = (event: Event) => {
+  const target = event.target as HTMLInputElement
+  // On-the-fly sanitize: automatically strip out numbers and symbols
+  const cleaned = target.value.replace(/[^a-zA-Zа-яА-ЯёЁўғқҳЎҒҚҲo'O'g'G'\s'’-]/g, '')
+  form.value.name = cleaned
+  nameHasError.value = false
+  if (errorMessage.value) errorMessage.value = ''
+}
+
+const onPhoneInput = (event: Event) => {
+  const target = event.target as HTMLInputElement
+  let raw = target.value
+
+  if (!raw.trim()) {
+    form.value.phone = ''
+    phoneHasError.value = false
+    return
+  }
+
+  // Extract digits only
+  let digits = raw.replace(/\D/g, '')
+  if (digits.startsWith('998')) {
+    digits = digits.slice(3)
+  }
+  digits = digits.slice(0, 9)
+
+  let formatted = '+998'
+  if (digits.length > 0) {
+    formatted += ' (' + digits.substring(0, 2)
+  }
+  if (digits.length >= 2) {
+    formatted += ') ' + digits.substring(2, 5)
+  }
+  if (digits.length >= 5) {
+    formatted += '-' + digits.substring(5, 7)
+  }
+  if (digits.length >= 7) {
+    formatted += '-' + digits.substring(7, 9)
+  }
+
+  form.value.phone = formatted
+  phoneHasError.value = false
+  if (errorMessage.value) errorMessage.value = ''
+}
+
+const onPhoneFocus = () => {
+  if (!form.value.phone.trim()) {
+    form.value.phone = '+998 ('
+  }
+}
+
+const onPhoneBlur = () => {
+  if (form.value.phone === '+998 (' || form.value.phone === '+998') {
+    form.value.phone = ''
+  }
+}
 
 const handleFormSubmit = async () => {
-  if (!form.value.name.trim()) {
-    errorMessage.value = 'Iltimos, ismingizni kiriting.'
-    return
-  }
-  if (!form.value.phone.trim() || form.value.phone.trim().length < 7) {
-    errorMessage.value = 'Iltimos, telefon raqamingizni to‘liq kiriting.'
+  nameHasError.value = false
+  phoneHasError.value = false
+  errorMessage.value = ''
+
+  const trimmedName = form.value.name.trim()
+  if (!trimmedName || !NAME_REGEX.test(trimmedName)) {
+    nameHasError.value = true
+    errorMessage.value = t('contact.nameError')
     return
   }
 
-  errorMessage.value = ''
+  const trimmedPhone = form.value.phone.trim()
+  if (!trimmedPhone || !PHONE_REGEX.test(trimmedPhone)) {
+    phoneHasError.value = true
+    errorMessage.value = t('contact.phoneError')
+    return
+  }
+
   isLoading.value = true
   try {
     await sendDemoEmail({
-      name: form.value.name,
-      phone: form.value.phone,
-      message: form.value.message,
+      name: trimmedName,
+      phone: trimmedPhone,
+      message: form.value.message.trim(),
     })
   } catch (error) {
     console.error('Submission error:', error)
@@ -128,43 +201,69 @@ const handleFormSubmit = async () => {
               <!-- Name & Phone Fields -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div class="space-y-1.5">
-                  <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                    <User class="w-3.5 h-3.5 text-sky-600" />
-                    <span>{{ t('contact.nameLabel') }}</span>
+                  <label class="text-xs font-bold text-slate-700 flex items-center justify-between">
+                    <span class="flex items-center gap-1.5">
+                      <User class="w-3.5 h-3.5 text-sky-600" />
+                      <span>{{ t('contact.nameLabel') }}</span>
+                    </span>
+                    <span class="text-[10px] text-slate-400 font-normal">max 50</span>
                   </label>
                   <input
-                    v-model="form.name"
+                    :value="form.name"
+                    @input="onNameInput"
                     required
                     type="text"
+                    maxlength="50"
                     placeholder="Sardor Aliyev"
-                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-sky-500 focus:ring-4 focus:ring-sky-100 transition-all text-slate-900 bg-slate-50/50 focus:bg-white placeholder:text-slate-400"
+                    :class="[
+                      'w-full px-4 py-3 rounded-xl border text-sm focus:outline-none transition-all placeholder:text-slate-400',
+                      nameHasError
+                        ? 'border-rose-400 bg-rose-50/40 text-rose-900 focus:ring-4 focus:ring-rose-100'
+                        : 'border-slate-200 text-slate-900 bg-slate-50/50 focus:bg-white focus:border-sky-500 focus:ring-4 focus:ring-sky-100'
+                    ]"
                   />
                 </div>
 
                 <div class="space-y-1.5">
-                  <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                    <Phone class="w-3.5 h-3.5 text-sky-600" />
-                    <span>{{ t('contact.phoneLabel') }}</span>
+                  <label class="text-xs font-bold text-slate-700 flex items-center justify-between">
+                    <span class="flex items-center gap-1.5">
+                      <Phone class="w-3.5 h-3.5 text-sky-600" />
+                      <span>{{ t('contact.phoneLabel') }}</span>
+                    </span>
+                    <span class="text-[10px] text-slate-400 font-normal">+998 (XX)</span>
                   </label>
                   <input
-                    v-model="form.phone"
+                    :value="form.phone"
+                    @input="onPhoneInput"
+                    @focus="onPhoneFocus"
+                    @blur="onPhoneBlur"
                     required
                     type="tel"
-                    placeholder="+998 90 123 45 67"
-                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-sky-500 focus:ring-4 focus:ring-sky-100 transition-all text-slate-900 bg-slate-50/50 focus:bg-white placeholder:text-slate-400"
+                    maxlength="19"
+                    placeholder="+998 (90) 123-45-67"
+                    :class="[
+                      'w-full px-4 py-3 rounded-xl border text-sm focus:outline-none transition-all placeholder:text-slate-400 font-mono tracking-wide',
+                      phoneHasError
+                        ? 'border-rose-400 bg-rose-50/40 text-rose-900 focus:ring-4 focus:ring-rose-100'
+                        : 'border-slate-200 text-slate-900 bg-slate-50/50 focus:bg-white focus:border-sky-500 focus:ring-4 focus:ring-sky-100'
+                    ]"
                   />
                 </div>
               </div>
 
               <!-- Textarea Field -->
               <div class="space-y-1.5">
-                <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                  <MessageSquare class="w-3.5 h-3.5 text-sky-600" />
-                  <span>{{ t('contact.messageLabel') }}</span>
-                </label>
+                <div class="flex items-center justify-between">
+                  <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                    <MessageSquare class="w-3.5 h-3.5 text-sky-600" />
+                    <span>{{ t('contact.messageLabel') }}</span>
+                  </label>
+                  <span class="text-[11px] text-slate-400">{{ form.message.length }}/500</span>
+                </div>
                 <textarea
                   v-model="form.message"
                   rows="4"
+                  maxlength="500"
                   :placeholder="t('contact.messagePlaceholder')"
                   class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-sky-500 focus:ring-4 focus:ring-sky-100 transition-all text-slate-900 bg-slate-50/50 focus:bg-white placeholder:text-slate-400 resize-none"
                 ></textarea>

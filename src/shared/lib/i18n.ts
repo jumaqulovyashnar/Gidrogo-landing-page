@@ -282,6 +282,16 @@ export const translations = {
       ru: 'Отправить еще заявку',
       en: 'Send another request',
     },
+    nameError: {
+      uz: 'Ism kamida 2 ta harfdan iborat bo‘lishi va raqamlarsiz yozilishi kerak.',
+      ru: 'Имя должно содержать минимум 2 буквы и не содержать цифр.',
+      en: 'Name must contain at least 2 letters and no numbers.',
+    },
+    phoneError: {
+      uz: 'Iltimos, telefon raqamingizni to‘liq kiriting (+998 ...)',
+      ru: 'Пожалуйста, введите полный номер телефона (+998 ...)',
+      en: 'Please enter your complete phone number (+998 ...)',
+    },
   },
   footer: {
     tagline: {
